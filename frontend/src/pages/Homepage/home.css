@@ -1,0 +1,59 @@
+.highlight {
+    background-color: rgba(255, 255, 232, 0.5);
+    color: rgb(232, 6, 6);
+    padding-bottom:  0.1em;
+    padding-inline-start: 0.2em;
+    padding-inline-end: 0.2em;
+    border-top-left-radius: 0.1em;
+    border-bottom-left-radius: 0.1em;
+    border-right: 2px solid rgb(255, 0, 0);
+    display: inline-block;
+}
+
+.highlight2 {
+    background-color: rgba(10, 10, 9, 0.5);
+    color: rgb(29, 249, 0);
+    padding-bottom:  0.1em;
+    padding-inline-start: 0.2em;
+    padding-inline-end: 0.2em;
+    border-top-left-radius: 0.1em;
+    border-bottom-left-radius: 0.1em;
+    border-right: 2px solid rgb(1, 255, 26);
+    display: inline-block;
+}
+
+.content {
+    font-size: 7rem;
+    margin-bottom: 10px;
+    /* background: linear-gradient(to left, rgba(35, 149, 255, 0), rgb(5, 41, 75)); */
+    /* background-color: aqua; */
+    background: -webkit-linear-gradient(left, #f6ff00, #4c1bff);
+    background: linear-gradient(to right, #f6ff00,#4c1bff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* padding: 4rem; */
+  }
+
+  /* ********************************************************** */
+  /*     for image background in the home page section .. .  */
+.editingImage {
+    background-color: rgb(13, 11, 54);
+    box-shadow: 4px 4px 4px 2px white, 0 0 10px white, 0 0 20px white, 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    animation: shadowPulse 2s ease-in-out infinite;
+}
+
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 4px 4px 4px 2px white, 0 0 10px white, 0 0 20px white, 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 4px 4px 8px 4px white, 0 0 20px white, 0 0 40px white, 0 8px 12px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 4px 4px 4px 2px white, 0 0 10px white, 0 0 20px white, 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* **************************************************************** */
