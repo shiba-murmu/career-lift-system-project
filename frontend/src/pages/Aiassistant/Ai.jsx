@@ -1,23 +1,102 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-function Ai() {
+const Ai = () => {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsFullScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  const handleSend = () => {
+    if (input.trim()) {
+      setMessages([...messages, { text: input, sender: "user" }]);
+      setInput("");
+      // Simulate AI response
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          { text: "This is an AI response.", sender: "ai" },
+        ]);
+      }, 1000);
+    }
+  };
+
   return (
-    <>
-      <div className="ai-container" style={{ padding: "20px", maxWidth: "800px", margin: "auto", backgroundColor: "#f5f5f5", borderRadius: "8px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
-        <div className="ai-header" style={{ marginBottom: "20px", textAlign: "center" }}>
-          <h1 style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: "bold", color: "#333" }}>AI Assistant</h1>
-        </div>
-        <div className="ai-body" style={{ fontFamily: "'Raleway', sans-serif", color: "#666" }}>
-          <p>
-            This is the AI assistant page. You can ask any question and the AI assistant will answer you.
-          </p>
-          <p>
-            Please ask your question and the AI assistant will answer you.
-          </p>
+    <div
+      className={`flex flex-col ${
+        isFullScreen ? "h-screen" : "h-[80vh] max-w-4xl mx-auto"
+      } bg-gray-100`}
+    >
+      {/* Chat Header */}
+      <div className="flex items-center justify-between p-4 bg-indigo-600 text-white shadow-md">
+        <h1 className="text-lg font-semibold">AI Chat</h1>
+      </div>
+
+      {/* Chat Messages */}
+      <div
+        ref={messagesContainerRef}
+        className="flex-1 overflow-y-auto p-4 space-y-4"
+      >
+        {messages.map((message, index) => (
+          <div
+            key={index}
+            className={`flex ${
+              message.sender === "user" ? "justify-end" : "justify-start"
+            }`}
+          >
+            <div
+              className={`max-w-[75%] p-3 rounded-lg shadow-md text-sm ${
+                message.sender === "user"
+                  ? "bg-indigo-800 text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+            >
+              {message.text}
+            </div>
+          </div>
+        ))}
+        <div ref={messagesEndRef} />
+      </div>
+
+      {/* Input Box */}
+      <div className="p-4 bg-white shadow-md">
+        <div className="flex items-center border border-gray-300 rounded-full px-3 py-2">
+          <input
+            type="text"
+            className="flex-1 text-sm px-4 py-2 border-none focus:outline-none"
+            placeholder="Type your message..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSend()}
+          />
+          <button
+            className="ml-3 px-4 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 transition-all"
+            onClick={handleSend}
+          >
+            Send
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Ai;
