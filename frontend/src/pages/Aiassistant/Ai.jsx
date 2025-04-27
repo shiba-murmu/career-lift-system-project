@@ -48,14 +48,14 @@ const Ai = () => {
           } bg-gray-100`}
         >
           {/* Chat Header */}
-          <div className="flex items-center justify-between p-4 bg-indigo-600 dark:bg-neutral-700 text-white shadow-md">
-            <h1 className="text-lg font-semibold">AI Chat</h1>
+          <div className="flex justify-center p-4 bg-indigo-600 dark:bg-neutral-700 dark:text-blue-500  text-white shadow-md">
+            <h1 className="text-lg font-semibold">AI assistant</h1>
           </div>
 
           {/* Chat Messages */}
           <div
             ref={messagesContainerRef}
-            className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-500  dark:bg-neutral-900"
+            className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-300  dark:bg-neutral-900"
           >
             {messages.map((message, index) => (
               <div
