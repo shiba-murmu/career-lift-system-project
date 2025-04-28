@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@mui/material";
 import "./profile.css"; // Your custom styles if needed
 import IconButtonWithBadge from "../../components/UI/button/IconButtonWithBadge";
 function Profile() {
