@@ -1,124 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "@mui/material";
+import './signup.css' 
 
 function SignUp() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <>
-      <div class="flex justify-center items-center h-screen">
-        <div className="border p-5">
-          <form class="w-full max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                >
-                  First Name
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
-                  type="text"
-                  placeholder="Jane"
-                />
-                <p class="text-red-500 text-xs italic">
-                  Please fill out this field.
-                </p>
-              </div>
-              <div class="w-full md:w-1/2 px-3">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                >
-                  Last Name
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
-                  type="text"
-                  placeholder="Doe"
-                />
-              </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full px-3">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-password"
-                >
-                  Password
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-password"
-                  type="password"
-                  placeholder="******************"
-                />
-                <p class="text-gray-600 text-xs italic">
-                  Make it as long and as crazy as you'd like
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-2">
-              <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-city"
-                >
-                  City
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-city"
-                  type="text"
-                  placeholder="Albuquerque"
-                />
-              </div>
-              <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-state"
-                >
-                  State
-                </label>
-                <div class="relative">
-                  <select
-                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-state"
-                  >
-                    <option>New Mexico</option>
-                    <option>Missouri</option>
-                    <option>Texas</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      class="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              {/* <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-zip"
-              >
-                Zip
-              </label>
+    <div className="flex flex-col justify-center items-center md:min-h-screen my-5 md:my-0 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white dark:bg-[#262626] shadow-2xl dark:shadow-0 rounded-xl p-6 sm:p-10 w-full max-w-md sm:max-w-lg">
+        <h2 className="text-2xl animateText  md:text-3xl  font-extrabold text-center text-[#90caf9] mb-6 sm:mb-8">
+          Create Your Account
+        </h2>
+        <form className="space-y-4 sm:space-y-6">
+          <div>
+            <label
+              className="block text-sm font-semibold text-gray-700 dark:text-white"
+              htmlFor="first-name"
+            >
+              First Name
+            </label>
+            <input
+              className="mt-1 sm:mt-2 block w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-sm shadow-sm focus:ring-purple-500 focus:border-purple-500"
+              id="first-name"
+              type="text"
+              placeholder="First name"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-sm font-semibold text-gray-700 dark:text-white"
+              htmlFor="last-name"
+            >
+              Last Name
+            </label>
+            <input
+              className="mt-1 sm:mt-2 block w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-sm shadow-sm focus:ring-purple-500 focus:border-purple-500"
+              id="last-name"
+              type="text"
+              placeholder="Last name"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-sm font-semibold text-gray-700 dark:text-white"
+              htmlFor="email"
+            >
+              Email Address
+            </label>
+            <input
+              className="mt-1 sm:mt-2 block w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-sm shadow-sm focus:ring-purple-500 focus:border-purple-500"
+              id="email"
+              type="email"
+              placeholder="jane.doe@gmail.com"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-sm font-semibold text-gray-700 dark:text-white"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <div className="relative mt-1 sm:mt-2">
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="grid-zip"
-                type="text"
-                placeholder="90210"
+                className="block  w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-sm shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="********"
               />
-            </div> */}
+              <button
+                type="button"
+                className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-blue-800 hover:text-gray-700 dark:hover:text-amber-600 focus:outline-none"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
             </div>
-          </form>
-        </div>
+          </div>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            size="large"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-full"
+          >
+            Sign Up
+          </Button>
+        </form>
+        <p className="text-sm text-center text-gray-600 dark:text-white mt-4 sm:mt-6">
+          Already have an account?{" "}
+          <a
+            href="/login"
+            className="text-purple-500 font-semibold hover:underline"
+          >
+            Log in
+          </a>
+        </p>
       </div>
-    </>
+    </div>
   );
 }
 

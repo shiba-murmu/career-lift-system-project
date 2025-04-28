@@ -25,9 +25,10 @@ function About() {
                 resources and guidance.
               </p>
               <img
-                src="https://via.placeholder.com/800x400"
+                src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Career Lift"
-                className="mt-6 rounded-lg shadow-md"
+                className="mt-6 rounded-lg shadow-md text-center"
+                style={{width: '100%', height: 'auto'}}
               />
             </div>
           </section>
@@ -84,9 +85,13 @@ function About() {
                 Sign Up Now
               </button>
             </Link>
-            <button className="mt-6 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700">
-              Get Started
-            </button>
+            <p className="text-gray-600 mt-4">or</p>
+            <Link to="/login" className="mt-6 inline-block">
+              <button className="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700">
+                Log In
+              </button>
+            </Link>
+           
           </section>
         </div>
       </div>
