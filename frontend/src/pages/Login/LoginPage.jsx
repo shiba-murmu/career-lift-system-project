@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
 
 
 function LoginPage() {
   return (
     <>
     
-      <section className="h-[60vh] p-3 md:p-0 md:h-screen  flex items-center justify-center" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
+      <BackgroundParticles />
+      <section className="h-[60vh] relative  p-3 md:p-0 md:h-screen  flex items-center justify-center" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
         <div className="bg-white dark:bg-neutral-800 dark:shadow-none shadow-neutral-500 rounded-lg shadow-lg p-13 w-full md:w-1/4">
           <h1
             className="md:text-5xl text-4xl font-bold mb-6 text-center text-[#1976d2] dark:text-[#90caf9]"
