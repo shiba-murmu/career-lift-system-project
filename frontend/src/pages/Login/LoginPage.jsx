@@ -7,7 +7,7 @@ function LoginPage() {
   return (
     <>
     
-      <section className="h-[60vh] p-3 md:p-0 md:h-screen  flex items-center justify-center">
+      <section className="h-[60vh] p-3 md:p-0 md:h-screen  flex items-center justify-center" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
         <div className="bg-white dark:bg-neutral-800 dark:shadow-none shadow-neutral-500 rounded-lg shadow-lg p-13 w-full md:w-1/4">
           <h1
             className="md:text-5xl text-4xl font-bold mb-6 text-center text-[#1976d2] dark:text-[#90caf9]"
@@ -19,7 +19,7 @@ function LoginPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm md:text-lg md:font-medium"
+                className="block mb-2 text-sm md:text-sm md:font-medium"
                 style={{ fontFamily: "Open Sans, sans-serif" }}
               >
                 Email
@@ -34,7 +34,7 @@ function LoginPage() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm md:text-lg font-medium mb-2"
+                className="block text-sm md:text-sm font-medium mb-2"
                 style={{ fontFamily: "Open Sans, sans-serif" }}
               >
                 Password

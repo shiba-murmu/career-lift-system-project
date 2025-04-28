@@ -2,7 +2,7 @@ import React from "react";
 function Setting() {
   return (
     <>
-      <div className="bg-gray-700 p-6 dark:text-white shadow-lg">
+      <div className="bg-gray-700 p-6 dark:text-white shadow-lg" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
         <h1 className="text-2xl font-semibold">Settings</h1>
         <p className="my-4">
           This is the settings page. You can change your app settings here.

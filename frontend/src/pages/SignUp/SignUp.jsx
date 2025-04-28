@@ -6,7 +6,7 @@ function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center items-center md:min-h-screen my-5 md:my-0 px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col justify-center items-center md:min-h-screen my-5 md:my-0 px-4 sm:px-6 lg:px-8" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
       <div className="bg-white dark:bg-[#262626] shadow-2xl dark:shadow-0 rounded-xl p-6 sm:p-10 w-full max-w-md sm:max-w-lg">
         <h2 className="text-2xl animateText  md:text-3xl  font-extrabold text-center text-[#90caf9] mb-6 sm:mb-8">
           Create Your Account
