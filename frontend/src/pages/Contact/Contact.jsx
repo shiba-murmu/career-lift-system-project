@@ -1,13 +1,14 @@
 import React from "react";
+import {Button} from "@mui/material";
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
-      <div className="bg-white shadow-md rounded-lg p-6 sm:p-10 w-full max-w-2xl">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8" style={{ fontFamily: "Open sans, sans-serif" , fontWeight: "bold"}}>
+      <div className="bg-white dark:bg-neutral-800 shadow-md rounded-lg p-6 sm:p-10 w-full max-w-2xl">
+        <h1 className="text-3xl font-bold text-center text-[#90caf9] mb-6">
           Contact Us
         </h1>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-gray-600 dark:text-white mb-8">
           Have questions or need help? Fill out the form below, and we’ll get
           back to you as soon as possible.
         </p>
@@ -15,7 +16,7 @@ function Contact() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-white"
             >
               Name
             </label>
@@ -29,7 +30,7 @@ function Contact() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-white"
             >
               Email
             </label>
@@ -43,7 +44,7 @@ function Contact() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-white"
             >
               Message
             </label>
@@ -54,16 +55,25 @@ function Contact() {
               placeholder="Your message..."
             ></textarea>
           </div>
-          <button
+          {/* <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-4 focus:ring-purple-300"
+            className="w-full  text-white py-2 px-4 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-4 focus:ring-purple-300"
           >
             Send Message
-          </button>
+          </button> */}
+          <Button 
+            variant="contained"
+            color="primary"
+            type="submit"
+            size="large"
+            fullWidth
+            className="w-full text-white py-2 px-4 rounded-lg shadow-lg  focus:outline-none focus:ring-4 focus:ring-purple-300">
+            Send Message
+          </Button>
         </form>
       </div>
       <div className="mt-10 flex flex-col items-center w-full max-w-2xl">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-[#90caf9] mb-6">
           Our Location
         </h2>
         <div className="w-full max-w-4xl h-64 sm:h-96 rounded-lg overflow-hidden shadow-lg">
