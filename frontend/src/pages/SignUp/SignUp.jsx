@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import './signup.css' 
-import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
-    <BackgroundParticles />
-    <div className="flex relative  flex-col justify-center items-center md:min-h-screen my-5 md:my-0 px-4 sm:px-6 lg:px-8" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
-      <BackgroundParticles />
+    <div className="flex flex-col justify-center items-center md:min-h-screen my-5 md:my-0 px-4 sm:px-6 lg:px-8" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
 
-      <div className="bg-white dark:bg-[#262626] shadow-2xl dark:shadow-0 rounded-xl p-6 sm:p-10 w-full max-w-md sm:max-w-lg">
+      <div className="bg-white  dark:bg-[#262626] shadow-2xl dark:shadow-0 rounded-xl p-6 sm:p-10 w-full max-w-md sm:max-w-lg">
         <h2 className="text-2xl animateText  md:text-3xl  font-extrabold text-center text-[#90caf9] mb-6 sm:mb-8">
           Create Your Account
         </h2>
@@ -42,7 +39,7 @@ function SignUp() {
               className="mt-1 sm:mt-2 block w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-sm shadow-sm focus:ring-purple-500 focus:border-purple-500"
               id="last-name"
               type="text"
-              placeholder="Last name"
+              placeholder="Last-name"
             />
           </div>
           <div>
