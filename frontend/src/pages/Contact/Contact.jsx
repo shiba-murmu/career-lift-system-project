@@ -69,7 +69,7 @@ function Contact() {
         <div className="w-full max-w-4xl h-64 sm:h-96 rounded-lg overflow-hidden shadow-lg">
           <iframe
             title="Company Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b9b8b8b8b8b!2sCompany%20HQ!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902546994967!2d90.41251831498177!3d23.75088508458914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c8b9b9e3f%3A0x9c9e6e7b5b5b5b5b!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1697040000000!5m2!1sen!2sbd"
             width="100%"
             height="100%"
             style={{ border: 0 }}
