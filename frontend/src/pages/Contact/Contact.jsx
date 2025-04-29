@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8" style={{ fontFamily: "Open sans, sans-serif" , fontWeight: "bold"}}>
       <div className="bg-white dark:bg-neutral-800 shadow-md rounded-lg p-6 sm:p-10 w-full max-w-2xl">
-        <h1 className="text-3xl font-bold text-center text-[#90caf9] mb-6">
+        <h1 className="text-3xl font-extrabold text-center text-[#90caf9] mb-6">
           Contact Us
         </h1>
         <p className="text-center text-gray-600 dark:text-white mb-8">
@@ -67,6 +67,11 @@ function Contact() {
             type="submit"
             size="large"
             fullWidth
+            style={{
+              
+              fontFamily: "Open sans, sans-serif",
+              fontWeight: "normal",
+            }}
             className="w-full text-white py-2 px-4 rounded-lg shadow-lg  focus:outline-none focus:ring-4 focus:ring-purple-300">
             Send Message
           </Button>
