@@ -12,7 +12,7 @@ function Profile() {
         <img
           src="./images/myimage.jpg"
           alt="User"
-          className="h-44 w-44 md:h-60 md:w-60 rounded-[25%] object-cover shadow-lg"
+          className="h-44 w-44 md:h-60 md:w-60 rounded-[15%] md:rounded-[25%] object-cover shadow-lg"
         />
         {/* <img
           src="https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171827_GwbDHEuhisbGFXRfIpXFhtf7wAvsbLut.jpg"
