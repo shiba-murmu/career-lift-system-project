@@ -71,6 +71,9 @@ import Intermediate from "./pages/Explorecareer/Intermediate/Intermediate";
 import ArticleAndAdvice from "./pages/ArticleAndDevice/ArticleAndAdvice";
 // import Login from './pages/Login/LoginPage';
 import LoginPage from "./pages/Login/LoginPage";
+// import Admin from "./admin/adminprofile/Admin";
+import Admin from "./admin/adminprofile/Admin";
+// import Admin from './admin/adminprofile/Admin';
 
 // ****************************************************
 
@@ -131,6 +134,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/article & advice" element={<ArticleAndAdvice />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin" element={<Admin />} />
             {/* This id helps to distinguish the files to their destinations. */}
             <Route path="/matriculation/:id" element={<Matriculation />} />
             <Route path="/graduation/:id" element={<Graduation />} />
