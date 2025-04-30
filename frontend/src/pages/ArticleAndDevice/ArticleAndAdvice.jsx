@@ -1,6 +1,13 @@
 import React from 'react';
 
 function ArticleAndAdvice() {
+  // this is a functional component that renders the Article and Advice page
+  // it contains a header, a description, and a grid of articles and advice cards
+  // each card contains a title and a brief description
+  
+
+  // this page will be design later.. when the backend is ready..
+  // for now, it will be a placeholder page with some dummy content
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
