@@ -51,94 +51,93 @@ import { useLocation } from "react-router-dom";
 /**
  * Importing pages here...
  */
-import Landingpage from "./pages/Landingpage";
-import Home from "./pages/Homepage/Home";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Ai from "./pages/Aiassistant/Ai";
-import SkillTest from "./pages/skilltest/SkillTest";
-import ExploreCareer from "./pages/Explorecareer/ExploreCareer";
-import Profile from "./pages/Profile/Profile";
-import Setting from "./pages/Settings/Setting";
-import Account from "./pages/Account/Account";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import SignUp from "./pages/SignUp/SignUp";
-import Matriculation from "./pages/Explorecareer/Matriculation/Matriculation";
-import Graduation from "./pages/Explorecareer/Graduation/Graduation";
-import Intermediate from "./pages/Explorecareer/Intermediate/Intermediate";
-import ArticleAndAdvice from "./pages/ArticleAndDevice/ArticleAndAdvice";
-// import Login from './pages/Login/LoginPage';
-import LoginPage from "./pages/Login/LoginPage";
-// import Admin from "./admin/adminprofile/Admin";
-import Admin from "./admin/adminprofile/Admin";
-// import Admin from './admin/adminprofile/Admin';
+// Importing all the pages for the application
+import Landingpage from "./pages/Landingpage"; // Landing page of the application
+import Home from "./pages/Homepage/Home"; // Home page
+import Footer from "./components/Footer/Footer"; // Footer component
+import Header from "./components/Header/Header"; // Header component
+import About from "./pages/About/About"; // About page
+import Contact from "./pages/Contact/Contact"; // Contact page
+import Ai from "./pages/Aiassistant/Ai"; // AI Assistant page
+import SkillTest from "./pages/skilltest/SkillTest"; // Skill Test page
+import ExploreCareer from "./pages/Explorecareer/ExploreCareer"; // Explore Career page
+import Profile from "./pages/Profile/Profile"; // User Profile page
+import Setting from "./pages/Settings/Setting"; // Settings page
+import Account from "./pages/Account/Account"; // Account page
+import Dashboard from "./pages/Dashboard/Dashboard"; // Dashboard page
+import SignUp from "./pages/SignUp/SignUp"; // Sign Up page
+import Matriculation from "./pages/Explorecareer/Matriculation/Matriculation"; // Matriculation page
+import Graduation from "./pages/Explorecareer/Graduation/Graduation"; // Graduation page
+import Intermediate from "./pages/Explorecareer/Intermediate/Intermediate"; // Intermediate page
+import ArticleAndAdvice from "./pages/ArticleAndDevice/ArticleAndAdvice"; // Articles and Advice page
+// import Login from './pages/Login/LoginPage'; // Login page (commented out)
+import LoginPage from "./pages/Login/LoginPage"; // Login page
+// import Admin from "./admin/adminprofile/Admin"; // Admin profile page (commented out)
+import Admin from "./admin/adminprofile/Admin"; // Admin profile page
+// import Admin from './admin/adminprofile/Admin'; // Admin profile page (duplicate commented out)
 
 // ****************************************************
 
+// Layout component to manage header and footer visibility
 const Layout = ({ children }) => {
   const location = useLocation();
-  const hideheaderFooter = location.pathname === "/"; // check it it's the landing page
+  const hideheaderFooter = location.pathname === "/"; // Check if it's the landing page
 
   return (
     <>
-      {!hideheaderFooter && <Header />}
-      {/* show header on all pages except landing page */}
-        <main>{children}</main>
-      {!hideheaderFooter && <Footer />}
-      {/* show footer on all pages except landing page */}
+      {!hideheaderFooter && <Header />} {/* Show header on all pages except landing page */}
+      <main>{children}</main> {/* Main content */}
+      {!hideheaderFooter && <Footer />} {/* Show footer on all pages except landing page */}
     </>
   );
 };
 
 // *******************************************************
+
 /**
- *
- * @returns Scroll on top page
+ * ScrollToTop component to automatically scroll to the top of the page
+ * after navigating to a new route.
  */
 function ScrollToTop() {
-  /**
-   * This is the function for to scroll on top after redirecting the page..
-   * automatically...
-   */
-  const { pathname } = useLocation();
+  const { pathname } = useLocation(); // Get the current pathname
 
   useEffect(() => {
-    window.scrollTo(0, 0); // scrolls to top-left corner
-  }, [pathname]);
+    window.scrollTo(0, 0); // Scroll to the top-left corner
+  }, [pathname]); // Trigger effect when pathname changes
 
   return null;
 }
+
 //************************************************** */
 
+// Main App component
 function App() {
   return (
     <>
-      {/* Here all the routes for the page available here... */}
+      {/* Define all the routes for the application */}
       <Router>
         <Layout>
-          <ScrollToTop />
+          <ScrollToTop /> {/* Scroll to top on route change */}
           <Routes>
-            <Route path="/" element={<Landingpage />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/ai assistant" element={<Ai />} />
-            <Route path="/skill test" element={<SkillTest />} />
-            <Route path="/explore career" element={<ExploreCareer />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/settings" element={<Setting />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/article & advice" element={<ArticleAndAdvice />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/admin" element={<Admin />} />
-            {/* This id helps to distinguish the files to their destinations. */}
-            <Route path="/matriculation/:id" element={<Matriculation />} />
-            <Route path="/graduation/:id" element={<Graduation />} />
-            <Route path="/intermediate/:id" element={<Intermediate />} />
+            <Route path="/" element={<Landingpage />} /> {/* Landing page route */}
+            <Route path="/home" element={<Home />} /> {/* Home page route */}
+            <Route path="/about" element={<About />} /> {/* About page route */}
+            <Route path="/contact" element={<Contact />} /> {/* Contact page route */}
+            <Route path="/ai assistant" element={<Ai />} /> {/* AI Assistant page route */}
+            <Route path="/skill test" element={<SkillTest />} /> {/* Skill Test page route */}
+            <Route path="/explore career" element={<ExploreCareer />} /> {/* Explore Career page route */}
+            <Route path="/profile" element={<Profile />} /> {/* Profile page route */}
+            <Route path="/settings" element={<Setting />} /> {/* Settings page route */}
+            <Route path="/account" element={<Account />} /> {/* Account page route */}
+            <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard page route */}
+            <Route path="/signup" element={<SignUp />} /> {/* Sign Up page route */}
+            <Route path="/article & advice" element={<ArticleAndAdvice />} /> {/* Articles and Advice page route */}
+            <Route path="/login" element={<LoginPage />} /> {/* Login page route */}
+            <Route path="/admin" element={<Admin />} /> {/* Admin profile page route */}
+            {/* Dynamic routes for specific career paths */}
+            <Route path="/matriculation/:id" element={<Matriculation />} /> {/* Matriculation page route */}
+            <Route path="/graduation/:id" element={<Graduation />} /> {/* Graduation page route */}
+            <Route path="/intermediate/:id" element={<Intermediate />} /> {/* Intermediate page route */}
           </Routes>
         </Layout>
       </Router>
