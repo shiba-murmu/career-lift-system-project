@@ -95,7 +95,7 @@ function ContentCards() {
 
         {/* View Details Button */}
         <div>
-          <button className="bg-amber-300 dark:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full flex items-center justify-center hover:bg-amber-400 dark:hover:bg-blue-400 transition duration-300 ease-in-out">
+          <button className="bg-amber-800 dark:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full flex items-center justify-center hover:bg-amber-700 dark:hover:bg-blue-400 transition duration-300 ease-in-out">
             <span className="text-sm text-gray-200 dark:text-gray-300 font-bold">
               View Details
             </span>

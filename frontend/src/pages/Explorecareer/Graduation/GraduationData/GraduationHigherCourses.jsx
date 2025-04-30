@@ -2,19 +2,6 @@ import React from "react";
 import ContentCards from "../../../../components/ContentCard/ContentCards";
 
 function GraduationHigherCourses() {
-  const course = {
-    image: "/public/images/career.jpeg",
-    title: "Advanced Computer Science",
-    location: "Online",
-    eligibility: "Graduation in CS or related field",
-    jobType: "Full-time",
-    amount: "$500",
-    description:
-      "This course provides advanced knowledge in computer science, including AI, ML, and data science.",
-    date: "April 29, 2025",
-    link: "/courses/advanced-computer-science",
-  };
-  
   const FilterBox = () => {
     return (
       <div className="flex justify-center mb-4">
@@ -25,12 +12,35 @@ function GraduationHigherCourses() {
         />
       </div>
     );
-  }
+  };
   return (
     <>
       <FilterBox />
-      <div className="p-2">
-        <ContentCards course={course} />
+      <div className="flex flex-wrap justify-around gap-10 p-4">
+        <ContentCards />
+
+        <ContentCards />
+        <ContentCards />
+
+        <ContentCards />
+
+        <ContentCards />
+        <ContentCards />
+
+        <ContentCards />
+        <ContentCards />
+
+        <ContentCards />
+
+        <ContentCards />
+        <ContentCards />
+
+        <ContentCards />
+        <ContentCards />
+
+        <ContentCards />
+
+        <ContentCards />
       </div>
     </>
   );

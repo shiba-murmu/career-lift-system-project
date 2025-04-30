@@ -76,7 +76,7 @@ function ButtonOptions() {
               </div>
             </div>
             {/* Logic based content will render here.. */}
-            <div className="h-screen">
+            <div>
               {getContent === "higherCourse" && <GraduationHigherCourses />}
               {getContent === "jobs" && <GraduationJobs />}
               {getContent === "exams" && <GraduationExams />}
@@ -116,7 +116,7 @@ function ButtonOptions() {
               </div>
             </div>
             {/* Logic based content will render here */}
-            <div className="h-screen">
+            <div>
               {getContent == "higherCourse" && <IntermediateHigherCourses />}
               {getContent == "jobs" && <IntermediateJobs />}
               {getContent == "exams" && <IntermediateExams />}
@@ -157,7 +157,7 @@ function ButtonOptions() {
               </div>
             </div>
             {/* Logic based content will render here.. */}
-            <div className="h-screen">
+            <div>
               {getContent == "higherCourse" && <MatriculationHigherCourses />}
               {getContent == "jobs" && <MatriculationJobs />}
               {getContent == "exams" && <MatriculationExams />}
