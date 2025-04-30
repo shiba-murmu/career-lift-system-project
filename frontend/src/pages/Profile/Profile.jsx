@@ -28,7 +28,7 @@ function Profile() {
             className="text-3xl text-center md:text-4xl md:font-bold"
             style={{ fontFamily: "Open Sans, sans-serif" }}
           >
-            Shiva Murmu
+            Shivani Singh
           </h2>
           <p className="mt-2 text-center text-lg dark:text-amber-400">
             A passionate software developer.
