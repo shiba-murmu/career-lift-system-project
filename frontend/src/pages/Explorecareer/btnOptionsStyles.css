@@ -1,6 +1,6 @@
 /* button css only active when button options is clicked */
 
 .btnOptionClick:focus {
-    background-color: blue;
+    background-color: rgb(150, 125, 0);
     outline: none;
 }
