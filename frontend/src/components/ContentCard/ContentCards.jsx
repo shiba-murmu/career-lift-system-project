@@ -42,19 +42,18 @@ function ContentCards() {
         <div className="flex justify-between items-center mt-4 mb-4">
           {/* Experience */}
           <div>
-            <PeopleOutlineIcon />
+            <PeopleOutlineIcon fontSize="small" />
             <span className="text-sm font-bold">1 - 2 Years</span>
           </div>
 
           {/* Job Type */}
           <div className="flex items-center gap-2">
-            <AccessTimeIcon />
+            <AccessTimeIcon fontSize="small" />
             <span className="text-sm font-bold">Full Time</span>
           </div>
 
-          {/* Location */}
           <div>
-            <LocationPinIcon />
+            <LocationPinIcon fontSize="small" />
             <span className="text-sm font-bold">Remote</span>
           </div>
         </div>
@@ -72,7 +71,7 @@ function ContentCards() {
         {/* Posted Date */}
         <div className="flex justify-between items-center mt-4">
           <div className="flex items-center gap-2">
-            <AccessAlarmIcon />
+            <AccessAlarmIcon fontSize="small" />
             <span className="text-sm font-thin">Posted on: Oct 10, 2023</span>
           </div>
         </div>
