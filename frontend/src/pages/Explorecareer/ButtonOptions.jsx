@@ -53,7 +53,7 @@ function ButtonOptions() {
               <div className="flex-1/4 mb-1 md:mb-0 md:border-b-0">
                 <button
                   onClick={() => setContent("higherCourse")}
-                  className="dark:bg-neutral-800 bg-blue-600 hover:bg-blue-500 btnOptionClick w-full dark:hover:bg-neutral-700 md:hover:rounded-lg md:hover:scale-105 transition duration-600 text-white font-light text-md md:text-sm  rounded-sm py-2"
+                  className="dark:bg-neutral-800 bg-blue-600 hover:bg-blue-500 btnOptionClick w-full dark:hover:bg-neutral-700 md:hover:rounded-lg md:hover:scale-105 transition duration-600 text-white font-light text-sm md:text-md  rounded-sm py-2"
                 >
                   <span>EXPLORE HIGHER COURSES</span>
                 </button>
@@ -61,7 +61,7 @@ function ButtonOptions() {
               <div className="flex-1/4 mb-1 md:mb-0  md:border-b-0">
                 <button
                   onClick={() => setContent("jobs")}
-                  className="dark:bg-neutral-800 btnOptionClick bg-blue-600 hover:bg-blue-500 w-full dark:hover:bg-neutral-700 md:hover:scale-105 transition duration-600 text-white  font-light text-md md:text-sm rounded-sm py-2 md:hover:rounded-lg"
+                  className="dark:bg-neutral-800 btnOptionClick bg-blue-600 hover:bg-blue-500 w-full dark:hover:bg-neutral-700 md:hover:scale-105 transition duration-600 text-white  font-light text-sm md:text-md rounded-sm py-2 md:hover:rounded-lg"
                 >
                   <span>EXPLORE JOBS</span>
                 </button>
@@ -69,7 +69,7 @@ function ButtonOptions() {
               <div className="flex-1/4  md:border-b-0">
                 <button
                   onClick={() => setContent("exams")}
-                  className="dark:bg-neutral-800 bg-blue-600 hover:bg-blue-500 btnOptionClick  w-full dark:hover:bg-neutral-700 md:hover:scale-105 transition duration-300 text-white rounded-sm font-light text-md md:text-sm  py-2 md:hover:rounded-lg"
+                  className="dark:bg-neutral-800 bg-blue-600 hover:bg-blue-500 btnOptionClick  w-full dark:hover:bg-neutral-700 md:hover:scale-105 transition duration-300 text-white rounded-sm font-light text-sm md:text-md  py-2 md:hover:rounded-lg"
                 >
                   <span>EXPLORE COMPETITIVE EXAMS</span>
                 </button>
