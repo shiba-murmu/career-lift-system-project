@@ -21,7 +21,7 @@ function ContentCards() {
     <>
       {/* Main Card Container */}
       <div
-        className="bg-gray-300 dark:border-gray-500 rounded-lg dark:bg-neutral-800 shadow-2xl dark:shadow-0 p-5 h-[40%] w-100% md:w-[25%]"
+        className="bg-gray-300 dark:border-gray-500 rounded-lg dark:bg-neutral-800 shadow-2xl dark:shadow-0 p-5 h-[27rem] w-100% md:w-[25%]"
         style={{ fontFamily: "Open sans , " }}
       >
         {/* Bookmark Button */}

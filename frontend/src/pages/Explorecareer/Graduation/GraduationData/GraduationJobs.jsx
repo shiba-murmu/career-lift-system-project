@@ -47,11 +47,11 @@ function GraduationJobs() {
             <ContentCards />
             <ContentCards />
           </div>
-          {/* <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3 ">
+          <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
-          </div> */}
+          </div>
           {/* <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3 ">
             <ContentCards />
             <ContentCards />
