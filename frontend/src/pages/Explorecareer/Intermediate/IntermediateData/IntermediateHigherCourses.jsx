@@ -1,5 +1,5 @@
 import React from "react";
-import ContentCards from "../../../../components/ContentCard/ContentCards";
+
 function IntermediateHigherCourses() {
   const FilterBox = () => {
     return (
@@ -15,33 +15,27 @@ function IntermediateHigherCourses() {
   return (
     <>
       <FilterBox />
-
-      <h1>Intermediate Higher Courses</h1>
       <div className="flex flex-wrap justify-around gap-10 p-4">
-        <ContentCards />
-
-        <ContentCards />
-        <ContentCards />
-
-        <ContentCards />
-
-        <ContentCards />
-        <ContentCards />
-
-        <ContentCards />
-        <ContentCards />
-
-        <ContentCards />
-
-        <ContentCards />
-        <ContentCards />
-
-        <ContentCards />
-        <ContentCards />
-
-        <ContentCards />
-
-        <ContentCards />
+        <div className="card bg-white shadow-md rounded-lg p-4 w-1/4">
+          <h2 className="text-xl font-bold">Course 1</h2>
+          <p className="text-gray-700">Description of Course 1</p>
+        </div>
+        <div className="card bg-white shadow-md rounded-lg p-4 w-1/4">
+          <h2 className="text-xl font-bold">Course 2</h2>
+          <p className="text-gray-700">Description of Course 2</p>
+        </div>
+        <div className="card bg-white shadow-md rounded-lg p-4 w-1/4">
+          <h2 className="text-xl font-bold">Course 3</h2>
+          <p className="text-gray-700">Description of Course 3</p>
+        </div>
+        <div className="card bg-white shadow-md rounded-lg p-4 w-1/4">
+          <h2 className="text-xl font-bold">Course 4</h2>
+          <p className="text-gray-700">Description of Course 4</p>
+        </div>
+        <div className="card bg-white shadow-md rounded-lg p-4 w-1/4">
+          <h2 className="text-xl font-bold">Course 5</h2>
+          <p className="text-gray-700">Description of Course 5</p>
+        </div>
       </div>
     </>
   );
