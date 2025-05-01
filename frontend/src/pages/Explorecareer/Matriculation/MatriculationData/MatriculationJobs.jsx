@@ -69,14 +69,6 @@ function MatriculationJobs() {
             <ContentCards />
             <ContentCards />
           </div>
-          {/* <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-            <ContentCards />
-            <ContentCards />
-          </div> */}
         </div>
       </div>
     </>
