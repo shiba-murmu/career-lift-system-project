@@ -42,21 +42,21 @@ function GraduationJobs() {
         <div className="md:w-10/12 flex flex-wrap justify-around h-[150vh] overflow-y-scroll bg-white dark:bg-neutral-900">
           {/* Header */}
           {/* Job Cards */}
-          <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
             <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
-          <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3 ">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
-          {/* <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3 ">
+          {/* <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
             <ContentCards />
             <ContentCards />
           </div>
-          <div className="flex flex-wrap justify-around p-4 w-[100%] gap-3">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
             <ContentCards />
             <ContentCards />
           </div> */}
