@@ -1,6 +1,7 @@
 import React from 'react';
 import React from "react";
-import ContentCards from "../../../../components/ContentCard/ContentCards";
+// import ContentCards from "../../../../components/ContentCard/ContentCards";
+import JobContentRender from "./JobContentRender";
 
 function JobContentRender() {
 
