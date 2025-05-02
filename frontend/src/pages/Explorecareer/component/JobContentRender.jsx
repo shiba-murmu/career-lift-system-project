@@ -1,6 +1,7 @@
 import React from "react";
 import ContentCards from "../../../components/ContentCard/ContentCards";
 import TextShow from "../../../components/animation/TextShow";
+import CareerSideBar from "../CareerSideBar";
 function JobContentRender() {
   const FilterBox = () => {
     return (
@@ -34,7 +35,9 @@ function JobContentRender() {
         */}
         {/* Sidebar */}
         <div className="md:w-2/12 bg-gray-200 p-4 dark:bg-neutral-800 rounded-r-2xl hidden md:block">
-          <h3 className="font-bold mb-4">Sidebar</h3>
+        <CareerSideBar />
+          {/* <h3 className="font-bold mb-4">Sidebar</h3>
+
           <ul>
             <li className="mb-2">
               <a href="#">Option 1</a>
@@ -48,7 +51,8 @@ function JobContentRender() {
             <li className="mb-2">
               <a href="#">Option 3</a>
             </li>
-          </ul>
+          </ul> */}
+
         </div>
 
         {/* Main Content */}
