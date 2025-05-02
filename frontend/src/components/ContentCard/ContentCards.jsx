@@ -20,8 +20,9 @@ function ContentCards() {
   return (
     <>
       {/* Main Card Container */}
+
       <div
-        className="bg-gray-300 dark:border-gray-500 rounded-lg dark:bg-neutral-800 shadow-2xl dark:shadow-0 p-5 h-[27rem] w-100% md:w-[25%]"
+        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-lg dark:bg-neutral-800 shadow-2xl dark:shadow-0 p-5 h-[27rem] w-100% md:w-[25%]"
         style={{ fontFamily: "Open sans , " }}
       >
         {/* Bookmark Button */}
@@ -99,6 +100,33 @@ function ContentCards() {
               View Details
             </span>
           </button>
+        </div>
+      </div>
+
+      {/* Mobile view */}
+      <div className="w-full flex flex-row md:hidden bg-gray-200 shadow-xl dark:bg-neutral-800 rounded-md">
+        <div className="w-1/3 flex justify-center items-center">
+          {/* Company Logo */}
+          <img
+            src="https://yt3.googleusercontent.com/FJI5Lzbf2dMd32xOqhoKpJArJooZhoX6v2qOcFO-wjSZUvs3H9xqq2gK4DQ47X0KnYgf7X2rpdU=s900-c-k-c0x00ffffff-no-rj"
+            alt="Company logo"
+            className="h-[80%] w-[80%] object-cover rounded-md shadow-lg"
+          />
+        </div>
+
+        <div className="w-2/3 flex flex-col justify-center items-start">
+          <span className="text-xl text-blue-800 font-bold dark:text-blue-300">
+            UX/UI Designer
+          </span>
+          <div className="flex justify-between w-[100%] mb-4 pr-4">
+            <div className="flex items-center gap-2">
+              <LocationPinIcon fontSize="small" />
+              <span className="text-sm font-thin">India, Jharkhand</span>
+            </div>
+            <button className="relative" onClick={toggleBookmark}>
+              {isBookmarked ? <TurnedInIcon /> : <TurnedInNotIcon />}
+            </button>
+          </div>
         </div>
       </div>
     </>
