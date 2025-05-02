@@ -68,7 +68,7 @@ function JobContentRender() {
           It will be hidden on mobile devices and will only be visible on larger screens.
         
         */}
-        <div className="md:w-10/12 flex flex-wrap justify-around  md:min-h-[80vh] bg-white dark:bg-neutral-900">
+        <div className="md:w-10/12 flex flex-wrap justify-around  md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
           {/* Header */}
           {/* Job Cards */}
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
@@ -136,40 +136,8 @@ function JobContentRender() {
               <ContentCards />
             </TextShow>
           </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-            <TextShow>
-              <ContentCards />
-            </TextShow>
-          </div>
+         
+          
         </div>
       </div>
     </>
