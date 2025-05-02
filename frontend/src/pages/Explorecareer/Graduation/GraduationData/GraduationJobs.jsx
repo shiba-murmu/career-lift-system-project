@@ -20,6 +20,7 @@ function GraduationJobs() {
   return (
     <>
       <FilterBox />
+      <div className="text-center">Recommended jobs for you</div>
 
       <div className="md:flex">
         {/* Sidebar */}
@@ -70,14 +71,6 @@ function GraduationJobs() {
             <ContentCards />
             <ContentCards />
           </div>
-          {/* <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-            <ContentCards />
-            <ContentCards />
-          </div> */}
         </div>
       </div>
     </>
