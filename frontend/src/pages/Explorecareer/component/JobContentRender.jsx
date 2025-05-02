@@ -1,6 +1,6 @@
 import React from "react";
 import ContentCards from "../../../components/ContentCard/ContentCards";
-
+import TextShow from "../../../components/animation/TextShow";
 function JobContentRender() {
   const FilterBox = () => {
     return (
@@ -99,32 +99,72 @@ function JobContentRender() {
       <div>
         <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh]  bg-white dark:bg-neutral-900">
           <div className="flex flex-wrap justify-around p-2  w-[100%] gap-5">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
+            <TextShow>
+              <ContentCards />
+            </TextShow>
           </div>
         </div>
       </div>
