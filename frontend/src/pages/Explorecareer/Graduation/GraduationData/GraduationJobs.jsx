@@ -1,8 +1,11 @@
 import React from 'react'
+import JobContentRender from '../../component/JobContentRender'
 
 function GraduationJobs() {
   return (
-    <div>GraduationJobs</div>
+    <div>
+      <JobContentRender />
+    </div>
   )
 }
 

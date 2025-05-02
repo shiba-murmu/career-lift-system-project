@@ -1,7 +1,5 @@
-import React from 'react';
 import React from "react";
-// import ContentCards from "../../../../components/ContentCard/ContentCards";
-import JobContentRender from "./JobContentRender";
+import ContentCards from "../../../components/ContentCard/ContentCards";
 
 function JobContentRender() {
 
@@ -35,6 +33,9 @@ function JobContentRender() {
             </li>
             <li className="mb-2">
               <a href="#">Option 2</a>
+            </li>
+            <li className="mb-2">
+              <a href="#">Option 3</a>
             </li>
             <li className="mb-2">
               <a href="#">Option 3</a>
