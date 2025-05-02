@@ -11,14 +11,14 @@ function Background({ bgImage, stream }) {
         <img
           src={bgImage}
           alt="background"
-          className="w-full h-10 md:h-36 object-center object-fit object-cover"
+          className="w-full h-10 md:h-20 object-center opacity-20 object-fit object-cover"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <span
-            className="text-2xl md:text-6xl text-white"
+            className="text-2xl md:text-5xl text-white"
             style={{
               fontFamily: "'Open Sans', sans-serif",
-              fontWeight: "bolder",
+              fontWeight: "normal",
             }}
           >
             {stream}
