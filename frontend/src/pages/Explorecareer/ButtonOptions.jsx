@@ -134,7 +134,7 @@ function ButtonOptions() {
               <div className="flex-1/4 mb-1 md:mb-0 md:border-b-0">
                 <button
                   onClick={() => setContent("higherCourse")}
-                  className="dark:bg-neutral-800 btnOptionClick w-full hover:bg-blue-500 md:hover:rounded-lg md:hover:scale-105 transition duration-600 text-white font-light text-sm md:text-md  rounded-sm py-2"
+                  className="dark:bg-neutral-800 bg-blue-500 btnOptionClick w-full hover:bg-blue-500 md:hover:rounded-lg md:hover:scale-105 transition duration-600 text-white font-light text-sm md:text-md  rounded-sm py-2"
                 >
                   <span>EXPLORE HIGHER COURSES</span>
                 </button>
