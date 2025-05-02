@@ -1,7 +1,7 @@
 import React from "react";
 import MainCard from "../../components/Card/MainCard";
 import "./ExploreCareer.css";
-import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
+// import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
 /**
  *
  * @returns Want use animation show here
