@@ -2,18 +2,17 @@ import React from "react";
 import ContentCards from "../../../components/ContentCard/ContentCards";
 
 function JobContentRender() {
-
   const FilterBox = () => {
     return (
       <div className="flex justify-center mb-0 md:mb-4 w-[100%] dark:bg-neutral-900 p-4">
-      <input
-        type="text"
-        placeholder="Search..."
-        className="border border-gray-300 rounded-sm p-2 w-1/2"
-      />
-      <button className="ml-2 bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">
-        Search
-      </button>
+        <input
+          type="text"
+          placeholder="Search..."
+          className="border border-gray-300 rounded-sm p-2 w-1/2"
+        />
+        <button className="ml-2 bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">
+          Search
+        </button>
       </div>
     );
   };
@@ -54,7 +53,6 @@ function JobContentRender() {
 
         {/* Main Content */}
 
-
         {/* 
           This is the main content section where the job cards will be displayed.
           The job cards will be rendered in a grid layout using flexbox.
@@ -66,13 +64,16 @@ function JobContentRender() {
           It will be hidden on mobile devices and will only be visible on larger screens.
         
         */}
-        <div className="md:w-10/12 flex flex-wrap justify-around h-[60vh] md:h-[150vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+        <div className="md:w-10/12 flex flex-wrap justify-around  md:min-h-[80vh] bg-white dark:bg-neutral-900">
           {/* Header */}
           {/* Job Cards */}
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
             <ContentCards />
             <ContentCards />
             <ContentCards />
+          </div>
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+            <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
@@ -80,19 +81,13 @@ function JobContentRender() {
             <ContentCards />
             <ContentCards />
             <ContentCards />
-            <ContentCards />
-            <ContentCards />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
-            <ContentCards />
-            <ContentCards />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
@@ -100,32 +95,31 @@ function JobContentRender() {
         </div>
       </div>
 
-
       {/* Mobile View */}
       <div>
-        <div className="md:hidden flex flex-wrap justify-around h-[60vh] md:h-[150vh] overflow-y-scroll bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+        <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh]  bg-white dark:bg-neutral-900">
+          <div className="flex flex-wrap justify-around p-2  w-[100%] gap-5">
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
             <ContentCards />
           </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
             <ContentCards />
             <ContentCards />
             <ContentCards />
@@ -139,4 +133,3 @@ function JobContentRender() {
 }
 
 export default JobContentRender;
-
