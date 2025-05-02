@@ -23,7 +23,7 @@ function MainCard({ heading, description, redirectPath }) {
 
   return (
     <>
-      <div className="sm:w-11/12 md:w-4/5 lg:w-3/4 bg-gray-200 dark:bg-neutral-800 shadow-xl md:shadow p-4 mx-auto md:rounded-2xl">
+      <div className="sm:w-11/12 md:w-4/5 lg:w-3/4 bg-gray-200 dark:bg-neutral-800 shadow-xl md:shadow p-4 mx-auto rounded-xl md:rounded-2xl">
         <div className="card-content">
           {/* Heading */}
           <h2
