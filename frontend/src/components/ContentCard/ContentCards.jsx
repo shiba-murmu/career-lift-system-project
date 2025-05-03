@@ -108,7 +108,7 @@ function ContentCards(props) {
       </div>
 
       {/* Mobile view */}
-      <div className="w-full flex flex-row md:hidden bg-gray-200 shadow-xl dark:bg-neutral-800 rounded-md">
+      <div className="w-full flex flex-row md:hidden bg-gray-300 shadow-md dark:bg-neutral-800 rounded-lg p-2 mt-4 mb-4">
         <div className="w-1/3 flex justify-start ml-2 items-center">
           {/* Company Logo */}
           <img
@@ -120,7 +120,7 @@ function ContentCards(props) {
 
         <div className="w-2/3 flex flex-col justify-center items-start">
           <span className="text-lg text-blue-800 font-bold dark:text-blue-300">
-            UX/UI Designer
+            {props.heading}
           </span>
           <div className="flex justify-between w-[100%] mb-4 pr-4">
             <div className="flex items-center gap-2">
