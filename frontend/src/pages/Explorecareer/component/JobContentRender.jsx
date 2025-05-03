@@ -61,7 +61,6 @@ function JobContentRender() {
 
       {/* Mobile View */}
       <div>
-        <h2 className="text-xl font-bold text-center w-full mb-4">Job Listings</h2>
         <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5">
             <TextShow>
