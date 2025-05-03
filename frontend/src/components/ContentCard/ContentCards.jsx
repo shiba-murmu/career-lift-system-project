@@ -8,7 +8,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime"; // Access time icon
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm"; // Access alarm icon
 import LocationPinIcon from "@mui/icons-material/LocationPin"; // Location pin icon
 
-function ContentCards() {
+function ContentCards(props) {
   // State for bookmark toggle
   const [isBookmarked, setIsBookmarked] = useState(false);
 
@@ -28,14 +28,18 @@ function ContentCards() {
         {/* Bookmark Button */}
         <div className="flex justify-end items-center ">
           <button className="relative" onClick={toggleBookmark}>
-            {isBookmarked ? <TurnedInIcon /> : <TurnedInNotIcon />}
+            {isBookmarked ? (
+              <TurnedInIcon style={{ color: "gold" }} />
+            ) : (
+              <TurnedInNotIcon style={{ color: "gray" }} />
+            )}
           </button>
         </div>
 
         {/* Card Header */}
         <div className="flex justify-start items-center mb-1">
           <span className="text-xl text-blue-800 font-bold dark:text-blue-300">
-            UX/UI Designer
+            {props.heading}
           </span>
         </div>
 
@@ -43,18 +47,18 @@ function ContentCards() {
         <div className="flex justify-between items-center mt-1 mb-1">
           {/* Experience */}
           <div>
-            <PeopleOutlineIcon fontSize="small" />
+            <PeopleOutlineIcon fontSize="small" style={{ color: "blue" }} />
             <span className="text-[4px] font-bold ml-1">1 - 2 Years</span>
           </div>
 
           {/* Job Type */}
           <div className="flex items-center gap-2">
-            <AccessTimeIcon fontSize="small" />
+            <AccessTimeIcon fontSize="small" style={{ color: "green" }} />
             <span className="text-[4px] font-bold">Full Time</span>
           </div>
 
           <div>
-            <LocationPinIcon fontSize="small" />
+            <LocationPinIcon fontSize="small" style={{ color: "red" }} />
             <span className="text-[4px] font-bold">Remote</span>
           </div>
         </div>
@@ -72,8 +76,8 @@ function ContentCards() {
         {/* Posted Date */}
         <div className="flex justify-between items-center mt-2">
           <div className="flex items-center gap-2">
-            <AccessAlarmIcon fontSize="small" />
-            <span className="text-[4px] font-thin text-amber-400">Posted on: Oct 10, 2023</span>
+            <AccessAlarmIcon fontSize="small" style={{ color: "orange" }} />
+            <span className="text-[4px] font-thin text-blue-600 dark:text-amber-400">Posted on: Oct 10, 2023</span>
           </div>
         </div>
 
@@ -120,11 +124,15 @@ function ContentCards() {
           </span>
           <div className="flex justify-between w-[100%] mb-4 pr-4">
             <div className="flex items-center gap-2">
-              <LocationPinIcon fontSize="small" />
-              <span className="text-[4px] font-thin text-gray-300">India, Jharkhand</span>
+              <LocationPinIcon fontSize="small" style={{ color: "red" }} />
+              <span className="text-[4px] font-thin dark:text-gray-300">India, Jharkhand</span>
             </div>
             <button className="relative" onClick={toggleBookmark}>
-              {isBookmarked ? <TurnedInIcon /> : <TurnedInNotIcon />}
+              {isBookmarked ? (
+                <TurnedInIcon style={{ color: "gold" }} />
+              ) : (
+                <TurnedInNotIcon style={{ color: "gray" }} />
+              )}
             </button>
           </div>
         </div>

@@ -24,120 +24,79 @@ function JobContentRender() {
       <div className="text-center">Recommended jobs for you</div>
 
       <div className="md:flex hidden md:gap-4 mt-4">
-        {/* 
-
-          This is the sidebar section. You can add any content you want here.
-          For example, you can add a list of categories or filters for the job search.
-
-          this sidbar will be hidden on mobile devices and will only be visible on larger screens.
-          You can customize the content of the sidebar as per your requirements.
-        
-        */}
         {/* Sidebar */}
         <div className="md:w-2/12 bg-gray-200 p-4 dark:bg-neutral-800 rounded-r-2xl hidden md:block">
-        <CareerSideBar />
-          {/* <h3 className="font-bold mb-4">Sidebar</h3>
-
-          <ul>
-            <li className="mb-2">
-              <a href="#">Option 1</a>
-            </li>
-            <li className="mb-2">
-              <a href="#">Option 2</a>
-            </li>
-            <li className="mb-2">
-              <a href="#">Option 3</a>
-            </li>
-            <li className="mb-2">
-              <a href="#">Option 3</a>
-            </li>
-          </ul> */}
-
+          <CareerSideBar />
         </div>
 
         {/* Main Content */}
-
-        {/* 
-          This is the main content section where the job cards will be displayed.
-          The job cards will be rendered in a grid layout using flexbox.
-
-          The main content will take up 10/12 of the width on larger screens and 100% on smaller screens.
-          The job cards will be displayed in a scrollable container with a fixed height.
-          You can customize the styles and layout as per your requirements.
-
-          It will be hidden on mobile devices and will only be visible on larger screens.
-        
-        */}
-        <div className="md:w-10/12 flex flex-wrap justify-around  md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
-          {/* Header */}
-          {/* Job Cards */}
+        <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <ContentCards heading="UX/UI Designer" />
+            <ContentCards heading="Software Engineer" />
+            <ContentCards heading="Data Scientist" />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <ContentCards heading="Product Manager" />
+            <ContentCards heading="Graphic Designer" />
+            <ContentCards heading="Marketing Specialist" />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <ContentCards heading="DevOps Engineer" />
+            <ContentCards heading="Business Analyst" />
+            <ContentCards heading="Content Writer" />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <ContentCards heading="Cybersecurity Analyst" />
+            <ContentCards heading="Quality Assurance Tester" />
+            <ContentCards heading="Database Administrator" />
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards />
-            <ContentCards />
-            <ContentCards />
+            <ContentCards heading="Mobile App Developer" />
+            <ContentCards heading="Cloud Architect" />
+            <ContentCards heading="AI/ML Engineer" />
           </div>
         </div>
       </div>
 
       {/* Mobile View */}
       <div>
-        <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh]  bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2  w-[100%] gap-5">
+        <h2 className="text-xl font-bold text-center w-full mb-4">Job Listings</h2>
+        <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5">
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="UI/UX designer" />
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Software Engineer" />
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Graphics Designer"/>
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Data Scientist" />
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Product Manager" />
             </TextShow>
           </div>
           <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Graphic Designer" />
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Data Manager"/>
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Database Administer"/>
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Software Tester" />
             </TextShow>
             <TextShow>
-              <ContentCards />
+              <ContentCards heading="Tester"/>
             </TextShow>
           </div>
-         
-          
         </div>
       </div>
     </>
