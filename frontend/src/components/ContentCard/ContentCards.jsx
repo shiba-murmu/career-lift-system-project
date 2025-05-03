@@ -22,7 +22,7 @@ function ContentCards(props) {
       {/* Main Card Container */}
 
       <div
-        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-4xl dark:bg-neutral-800 shadow-2xl dark:shadow-0 p-5 h-[20.5rem] w-100% md:w-[25%]"
+        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-4xl dark:bg-neutral-800 shadow-xl dark:shadow-0 p-5 h-[20.5rem] w-100% md:w-[25%]"
         style={{ fontFamily: "Open sans , " }}
       >
         {/* Bookmark Button */}
