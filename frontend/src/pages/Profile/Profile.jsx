@@ -10,7 +10,7 @@ function Profile() {
       {/* Profile Image Overlapping */}
       <div className="flex justify-center -mt-20 md:-mt-28">
         <img
-          src="/images/myimage.jpg"
+          sr="/images/myimage.jpg"
           alt="User"
           className="h-44 w-44 md:h-60 md:w-60 rounded-[15%] md:rounded-[25%] object-cover shadow-lg"
         />
