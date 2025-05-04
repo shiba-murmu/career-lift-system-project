@@ -125,7 +125,7 @@ function ContentCards(props) {
           <div className="flex justify-between w-[100%] mb-4 pr-4">
             <div className="flex items-center gap-2">
               <LocationPinIcon fontSize="small" style={{ color: "red" }} />
-              <span className="text-[4px] font-thin dark:text-gray-300">India, Jharkhand</span>
+              <span className="text-[10px] font-thin dark:text-gray-300">India, Jharkhand</span>
             </div>
             <button className="relative" onClick={toggleBookmark}>
               {isBookmarked ? (
