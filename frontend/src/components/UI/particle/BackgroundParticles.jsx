@@ -74,7 +74,7 @@ function BackgroundParticles() {
         options={{
           background: {
             color: {
-              value: isDark ? "#000000" : "#0866ff",
+              value: isDark ? "#000000" : "#545C52",
               // value: "#0A0A0A",
             },
           },
