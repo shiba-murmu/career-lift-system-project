@@ -3,7 +3,6 @@ import TextShow from "../../components/animation/TextShow";
 import Transition from "../../components/sliderEffect/Transition";
 import "./home.css";
 import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
-import CardCarousel from "../../components/sliderEffect/CardCarousel";
 
 function SectionOne() {
   return (
@@ -83,7 +82,7 @@ function SectionThree() {
   return (
     <>
       {/* <SectionThree /> */}
-      <div className=" relative z-50  min-h-screen bg-pink-900 dark:bg-neutral-900 py-10 w-full md:grid md:">
+      <div className=" relative z-50  min-h-screen bg-[#2D1D3D] dark:bg-neutral-900 py-10 w-full md:grid md:">
         {/* <BackgroundParticles /> */}
         <div className="md:flex px-5 md:justify-center md:items-center">
           <div className="text-start relative md:w-1/2 px-10 flex flex-col h-96 justify-center">
