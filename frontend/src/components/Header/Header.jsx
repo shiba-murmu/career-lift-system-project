@@ -79,31 +79,16 @@ function Header() {
   return (
     <AppBar
       position="relative"
-      sx={{ zIndex: 1000 }}
+      sx={{
+        zIndex: 1000,
+        backgroundColor: isDark ? "#313131" : "#000a58",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AutoStoriesIcon
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            C LIFT
-          </Typography> */}
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -132,8 +117,6 @@ function Header() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                // Link tag added here to navigate to different pages
-                // on small screen..
                 <Link
                   key={page}
                   to={`/${page.toLowerCase()}`}
@@ -175,10 +158,6 @@ function Header() {
             }}
           >
             {pages.map((page) => (
-              /**
-               * Here also Link tag added to navigate to different pages
-               * on large screen...
-               */
               <Link
                 key={page}
                 to={`/${page.toLowerCase()}`}
@@ -216,10 +195,6 @@ function Header() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                /**
-                 * Add link tags to redirect to different pages
-                 * on all screens..
-                 */
                 <Link key={setting} to={`/${setting.toLowerCase()}`}>
                   <MenuItem onClick={handleCloseUserMenu}>
                     <Typography sx={{ textAlign: "center" }}>
