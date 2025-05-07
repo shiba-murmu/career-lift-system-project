@@ -49,7 +49,7 @@ function SectionTwo() {
           </h1>
           <div className="text-center pt-2 px-5 flex flex-col relative">
             <p
-              className="text-sm md:text-lg text-blue-900 dark:text-blue-600"
+              className="text-sm md:text-lg text-black dark:text-blue-600"
               style={{
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: "SemiBold",
@@ -58,7 +58,7 @@ function SectionTwo() {
               Career lift is the platform where you can explore a wide range of
             </p>
             <p
-              className="text-sm md:text-lg text-blue-900 dark:text-blue-600 "
+              className="text-sm md:text-lg text-blue-950 dark:text-amber-300"
               style={{
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: "SemiBold",
