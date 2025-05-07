@@ -4,16 +4,10 @@ import Transition from "../../components/sliderEffect/Transition";
 import "./home.css";
 import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
 
-function SectionOne() {
-  return (
-    <>
-      <div className="relative mt-2 md:mt-5 bg-gray-700 z-50 h-[50vh] grid place-content-center  w-full dark:bg-neutral-900">
-        {/* <img src="./images/career.jpeg" alt="some public images here." */}
-        {/* className="absolute top-0 left-0 w-full h-full object-cover hover:opacity-50 transform duration-500 hove:size-110" /> */}
-      </div>
-    </>
-  );
-}
+// Home page of the website .
+
+
+
 
 function SectionTwo() {
   /**
@@ -153,7 +147,7 @@ function SectionFour() {
 
   return (
     <>
-      <div className="relative h-64 md:min-h-[70vh] z-50 w-full grid place-items-center text-4xl  md:text-7xl  font-bold text-amber-400">
+      <div className="relative h-64 md:min-h-[70vh] z-50 w-full grid place-items-center text-7xl  md:text-7xl  font-bold text-amber-400">
         <TextShow>EXPLORE US</TextShow>
       </div>
     </>
@@ -167,7 +161,6 @@ function Home() {
   return (
     <>
       <Transition />
-      {/* <SectionOne /> commented for some time */}
       <SectionTwo />
       <SectionThree />
       <SectionFour />
