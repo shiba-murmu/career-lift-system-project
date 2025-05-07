@@ -74,7 +74,7 @@ function BackgroundParticles() {
         options={{
           background: {
             color: {
-              value: isDark ? "#000000" : "#131D62",
+              value: isDark ? "#000000" : "#99CFFF",
               // value: "#0A0A0A",
             },
           },
@@ -87,7 +87,7 @@ function BackgroundParticles() {
               },
               onHover: {
                 enable: true,
-                mode: "repulse",
+                mode: "repulse", // Changed from "Remy" to "repulse" for valid mode
               },
               resize: true,
             },
@@ -99,19 +99,26 @@ function BackgroundParticles() {
                 distance: 200,
                 duration: 0.4,
               },
+              bubble: {
+                // Added a new mode
+                distance: 250,
+                size: 10,
+                duration: 2,
+                opacity: 0.8,
+              },
             },
           },
           particles: {
             color: {
-              value: isDark ? "#007ffe" : "#ffffff",
-            //   changing the color of the particle tops
+              value: isDark ? "#007ffe" : [ "#B45A00" , "#87b400" , "#e8000e" , "#0073e6"],
+              //   changing the color of the particle tops
             },
             links: {
-              color: isDark ? "#007ffe" : "#ffffff",
-            //   Changing the linking between the partifla                                                                                                                                    
+              color: isDark ? "#007ffe" : "#000000",
+              //   Changing the linking between the partifla
               distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 1,
               width: 1,
             },
             move: {
@@ -121,7 +128,7 @@ function BackgroundParticles() {
                 default: "bounce",
               },
               random: false,
-              speed: 6,
+              speed: 4,
               straight: false,
             },
             number: {
@@ -132,10 +139,10 @@ function BackgroundParticles() {
               value: 80,
             },
             opacity: {
-              value: 0.5,
+              value: 1,
             },
             shape: {
-              type: "circle",
+              type: ["circle", "edge", "triangle", "polygon", "star", "image"],
             },
             size: {
               value: { min: 1, max: 5 },
