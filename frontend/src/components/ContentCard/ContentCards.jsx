@@ -22,7 +22,7 @@ function ContentCards(props) {
       {/* Main Card Container */}
 
       <div
-        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-4xl dark:bg-neutral-800 shadow-xl dark:shadow-0 p-5 h-[25.5em] w-100% md:w-[25%]"
+        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-2xl dark:bg-neutral-800 shadow-xl dark:shadow-0 p-5 h-[22.5em] w-100% md:w-[25%]"
         style={{ fontFamily: "Open sans , " }}
       >
         {/* Bookmark Button */}
@@ -65,7 +65,7 @@ function ContentCards(props) {
 
         {/* Job Description */}
         <div>
-          <p className="text-[16px] text-gray-600 dark:text-gray-300">
+          <p className="text-[13px] text-gray-600 dark:text-gray-300">
             We are looking for a creative and detail-oriented UX/UI Designer to
             join our team. The ideal candidate will have experience in designing
             user-friendly interfaces and a strong understanding of design
@@ -99,7 +99,7 @@ function ContentCards(props) {
 
         {/* View Details Button */}
         <div>
-          <button className="bg-amber-800 dark:bg-blue-900 text-white font-bold py-2 px-4 rounded-full w-full flex items-center justify-center hover:bg-amber-700 dark:hover:bg-blue-700 transition duration-300 ease-in-out">
+          <button className="bg-amber-800 dark:bg-blue-900 text-white font-bold py-2 px-4 rounded-xl w-full flex items-center justify-center hover:bg-amber-700 dark:hover:bg-blue-700 transition duration-300 ease-in-out">
             <span className="text-[4px] text-gray-200 dark:text-gray-300 font-bold">
               View Details
             </span>
