@@ -89,7 +89,7 @@ function SectionThree() {
             <div>
               {/* For heading divs */}
               <h1
-                className="text-2xl md:text-5xl font-bold text-black"
+                className="text-2xl md:text-5xl font-bold text-black dark:text-white"
                 style={{
                   fontFamily: "'Open Sans', sans-serif",
                   fontWeight: "bolder",
@@ -102,7 +102,7 @@ function SectionThree() {
             </div>
             <TextShow>
               <p
-                className="text-sm md:text-lg text-blue-950  font-bold leading-relaxed"
+                className="text-sm md:text-lg text-blue-950 dark:text-amber-300  font-bold leading-relaxed"
                 style={{
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: "normal",
@@ -117,7 +117,7 @@ function SectionThree() {
             </TextShow>
             <TextShow>
               <p
-                className="text-sm md:text-lg text-blue-950  font-bold leading-relaxed"
+                className="text-sm md:text-lg text-blue-950 dark:text-amber-300  font-bold leading-relaxed"
                 style={{
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: "SemiBold",
