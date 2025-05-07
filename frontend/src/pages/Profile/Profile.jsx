@@ -8,7 +8,7 @@ function MoreContent() {
 
 function Profile() {
   return (
-    <div className="min-h-screen w-full bg-[#e0e8ff] dark:bg-neutral-800">
+    <div className="min-h-screen w-full bg-[#e0e8ff] dark:bg-neutral-900">
       {/* Top Header Section */}
       <div className="w-full h-30 md:h-40   py-10 text-center"></div>
 

@@ -41,21 +41,21 @@ const Ai = () => {
 
   return (
     <>
-      <div className="p-0 md:p-10 bg-gray-200 dark:bg-neutral-800 min-h-screen ">
+      <div className="p-0 md:p-10 bg-[#e0e8ff] dark:bg-neutral-900 min-h-screen ">
         <div
           className={`flex flex-col ${
             isFullScreen ? "h-screen" : "h-[80vh] max-w-4xl mx-auto"
           } bg-gray-100`}
         >
           {/* Chat Header */}
-          <div className="flex justify-center p-4 bg-indigo-600 dark:bg-neutral-700 dark:text-blue-500  text-white shadow-md">
-            <h1 className="text-lg font-semibold">AI assistant</h1>
+          <div className="flex justify-center p-4 bg-indigo-600 dark:bg-neutral-700 dark:text-blue-200  text-white shadow-md">
+            <span className="text-2xl font-semibold">AI ASSISTANT</span>
           </div>
 
           {/* Chat Messages */}
           <div
             ref={messagesContainerRef}
-            className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-300  dark:bg-neutral-900"
+            className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-300  dark:bg-neutral-800"
           >
             {messages.map((message, index) => (
               <div
@@ -79,7 +79,7 @@ const Ai = () => {
           </div>
 
           {/* Input Box */}
-          <div className="p-3 md:p-5 bg-white dark:bg-neutral-900 shadow-md">
+          <div className="p-3 md:p-5 bg-white dark:bg-neutral-800 shadow-md">
             <div className="flex items-center border border-gray-300 rounded-xl px-3 py-2">
               <input
                 type="text"
