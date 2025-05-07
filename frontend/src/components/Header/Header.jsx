@@ -131,7 +131,7 @@ function Header() {
             </Menu>
           </Box>
           <AutoStoriesIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: isDark ? "#ffffff" : "#9c27b0" }}
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: isDark ? "#fdc700" : "#9c27b0" }}
           />
           <Typography
             variant="h5"
@@ -145,7 +145,7 @@ function Header() {
               fontFamily: "Open Sans",
               fontWeight: 800,
               letterSpacing: ".3rem",
-              color: isDark ? "#ffffff" : "#6062fe",
+              color: isDark ? "#29b6f6" : "#1a73e8",
               textDecoration: "none",
             }}
           >
