@@ -1,11 +1,16 @@
 import React from "react";
 import "./profile.css"; // Your custom styles if needed
 import IconButtonWithBadge from "../../components/UI/button/IconButtonWithBadge";
+
+function MoreContent() {
+  return <></>;
+}
+
 function Profile() {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-[#e0e8ff] dark:bg-neutral-800">
       {/* Top Header Section */}
-      <div className="w-full h-30 md:h-40 bgColor py-10 text-center"></div>
+      <div className="w-full h-30 md:h-40   py-10 text-center"></div>
 
       {/* Profile Image Overlapping */}
       <div className="flex justify-center -mt-20 md:-mt-28">
@@ -38,27 +43,29 @@ function Profile() {
               Connections
             </Button> */}
             <div>
-              <IconButtonWithBadge text="CONNECTIONS" badgeNumber="5" badgeColor={"success"} btnColor={"primary"} />
+              <IconButtonWithBadge
+                text="CONNECTIONS"
+                badgeNumber="5"
+                badgeColor={"success"}
+                btnColor={"primary"}
+              />
             </div>
             <div>
-              <IconButtonWithBadge text="ACTIVITES" badgeNumber="2" badgeColor={"primary"} btnColor={"secondary"} />
+              <IconButtonWithBadge
+                text="ACTIVITES"
+                badgeNumber="2"
+                badgeColor={"primary"}
+                btnColor={"secondary"}
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Pending Content Section */}
-      <div className="w-full bg-gray-600 py-16 flex justify-center items-center">
-        <span
-          className="text-2xl md:text-5xl text-white font-bold"
-          style={{ fontFamily: "Open Sans, sans-serif" }}
-        >
-          Pending Contents...
-        </span>
-      </div>
+      {/* More Content Section */}
+      <MoreContent />
     </div>
   );
 }
 
 export default Profile;
-
