@@ -13,7 +13,7 @@ function For_Higher_Education_Cards(props) {
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea component={Link} to={`/education/${props.heading}`}>
+        <CardActionArea component={Link} to={`/education/1/post/${props.heading}`}>
           <CardMedia
             component="img"
             height="140"

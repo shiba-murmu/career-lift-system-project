@@ -138,7 +138,7 @@ function App() {
             <Route path="/matriculation/:id" element={<Matriculation />} /> {/* Matriculation page route */}
             <Route path="/graduation/:id" element={<Graduation />} /> {/* Graduation page route */}
             <Route path="/intermediate/:id" element={<Intermediate />} /> {/* Intermediate page route */}
-            <Route path="/education/:id" element={<EducationSinglePage />} /> {/* Education single page route 
+            <Route path="/education/:id/post/:postId" element={<EducationSinglePage />} /> {/* Education single page route 
             */}
           </Routes>
         </Layout>
