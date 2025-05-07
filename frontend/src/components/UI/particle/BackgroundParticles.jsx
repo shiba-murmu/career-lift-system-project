@@ -74,7 +74,8 @@ function BackgroundParticles() {
         options={{
           background: {
             color: {
-              value: isDark ? "#000000" : "#99CFFF",
+              // value: isDark ? "#000000" : "#99CFFF",
+              value: isDark ? "#000000" : "#5497d1",
               // value: "#0A0A0A",
             },
           },
@@ -114,7 +115,7 @@ function BackgroundParticles() {
               //   changing the color of the particle tops
             },
             links: {
-              color: isDark ? "#007ffe" : "#000000",
+              color: isDark ? "#007ffe" : [ "#000000" , "#B45A00" , "#87b400" , "#e8000e" , "#0073e6"],
               //   Changing the linking between the partifla
               distance: 150,
               enable: true,
