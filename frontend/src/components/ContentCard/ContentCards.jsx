@@ -119,7 +119,7 @@ function ContentCards(props) {
         </div>
 
         <div className="w-2/3 flex flex-col justify-center items-start">
-          <span className="text-lg text-blue-800 font-bold dark:text-blue-300">
+          <span className="text-xl text-blue-800 font-bold dark:text-blue-300">
             {props.heading}
           </span>
           <div className="flex justify-between w-[100%] mb-4 pr-4">
