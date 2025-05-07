@@ -1,33 +1,38 @@
+// This file contains the HigherEducation component, which renders different educational recommendations based on the provided ID.
+// It uses Material-UI components for styling and layout.
+
+// Import necessary libraries and components
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-
 import CareerSideBar from "../CareerSideBar";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+
+// Component to render individual cards for higher education options
 function For_Higher_Education_Cards(props) {
-  const { id } = useParams()
+  const { id } = useParams(); // Extract the ID from the URL parameters
+
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea
           component={Link}
-          to={`/education/${id}/post/${props.heading}`}
+          to={`/education/${id}/post/${props.heading}`} // Dynamic link based on the heading and ID
         >
           <CardMedia
             component="img"
             height="140"
-            
-            image={props.image}
+            image={props.image} // Image for the card
             alt="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {props.heading}
+              {props.heading} // Heading for the card
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
               Lizards are a widespread group of squamate reptiles, with over
@@ -40,7 +45,9 @@ function For_Higher_Education_Cards(props) {
   );
 }
 
+// Main HigherEducation component
 function HigherEducation({ id }) {
+  // FilterBox component for search functionality
   const FilterBox = () => {
     return (
       <div className="flex justify-center mb-0 md:mb-4 w-[100%] dark:bg-neutral-900 p-4">
@@ -55,10 +62,12 @@ function HigherEducation({ id }) {
       </div>
     );
   };
+
+  // Function to render content based on the provided ID
   const idbased_rendering = (id) => {
     switch (id) {
       case "1":
-        // matriculation level education
+        // Matriculation level education recommendations
         return (
           <>
             <FilterBox />
@@ -67,11 +76,12 @@ function HigherEducation({ id }) {
             </div>
             <div className="md:flex hidden md:gap-4 mt-4">
               {/* Sidebar */}
-              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800 hidden md:block">
                 <CareerSideBar />
               </div>
               {/* Main Content */}
               <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                {/* Render multiple cards for higher education options */}
                 <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Software Engineer"
@@ -86,7 +96,8 @@ function HigherEducation({ id }) {
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                {/* Additional rows of cards */}
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Network Engineer"
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
@@ -100,7 +111,7 @@ function HigherEducation({ id }) {
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="DevOps Engineer"
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
@@ -114,7 +125,7 @@ function HigherEducation({ id }) {
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Cybersecurity Analyst"
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
@@ -128,7 +139,7 @@ function HigherEducation({ id }) {
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Mobile App Developer"
                     image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
@@ -146,9 +157,8 @@ function HigherEducation({ id }) {
             </div>
 
             {/* Mobile view */}
-
             <div>
-              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3">
                 <For_Higher_Education_Cards
                   heading="Software Engineer"
                   image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
@@ -211,7 +221,7 @@ function HigherEducation({ id }) {
           </>
         );
       case "2":
-        // Intermediate level education
+        // Intermediate level education recommendations
         return (
           <>
             <FilterBox />
@@ -220,11 +230,12 @@ function HigherEducation({ id }) {
             </div>
             <div className="md:flex hidden md:gap-4 mt-4">
               {/* Sidebar */}
-              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800 hidden md:block">
                 <CareerSideBar />
               </div>
               {/* Main Content */}
               <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                {/* Render multiple cards for intermediate level education options */}
                 <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Intermediate Science"
@@ -239,7 +250,8 @@ function HigherEducation({ id }) {
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                {/* Additional rows of cards */}
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Diploma in Engineering"
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
@@ -253,7 +265,7 @@ function HigherEducation({ id }) {
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Certificate in Computer Applications"
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
@@ -267,7 +279,7 @@ function HigherEducation({ id }) {
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Vocational Training in Electronics"
                     image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
@@ -285,9 +297,8 @@ function HigherEducation({ id }) {
             </div>
 
             {/* Mobile view */}
-
             <div>
-              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3">
                 <For_Higher_Education_Cards
                   heading="Intermediate Science"
                   image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
@@ -341,6 +352,7 @@ function HigherEducation({ id }) {
           </>
         );
       case "3":
+        // Matriculation level education recommendations
         return (
           <>
             <FilterBox />
@@ -349,11 +361,12 @@ function HigherEducation({ id }) {
             </div>
             <div className="md:flex hidden md:gap-4 mt-4">
               {/* Sidebar */}
-              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800 hidden md:block">
                 <CareerSideBar />
               </div>
               {/* Main Content */}
               <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                {/* Render multiple cards for matriculation level education options */}
                 <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="High School Science"
@@ -368,7 +381,8 @@ function HigherEducation({ id }) {
                     image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                {/* Additional rows of cards */}
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Vocational Training in IT"
                     image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
@@ -382,7 +396,7 @@ function HigherEducation({ id }) {
                     image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
                   />
                 </div>
-                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
                   <For_Higher_Education_Cards
                     heading="Certificate in Basic Computer Skills"
                     image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
@@ -400,9 +414,8 @@ function HigherEducation({ id }) {
             </div>
 
             {/* Mobile view */}
-
             <div>
-              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3">
                 <For_Higher_Education_Cards
                   heading="High School Science"
                   image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
@@ -443,19 +456,20 @@ function HigherEducation({ id }) {
             </div>
           </>
         );
-
       default:
-        return null;
+        return null; // Default case if ID doesn't match
     }
   };
 
-  return <>{idbased_rendering(id)}</>;
+  return <>{idbased_rendering(id)}</>; // Render content based on ID
 }
 
+// Default props for the component
 HigherEducation.defaultProps = {
   title: "Default Title",
 };
 
+// Prop types for validation
 HigherEducation.propTypes = {
   title: PropTypes.string,
 };
