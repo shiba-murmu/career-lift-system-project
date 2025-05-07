@@ -8,18 +8,20 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CareerSideBar from "../CareerSideBar";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 function For_Higher_Education_Cards(props) {
+  const { id } = useParams()
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea
           component={Link}
-          to={`/education/1/post/${props.heading}`}
+          to={`/education/${id}/post/${props.heading}`}
         >
           <CardMedia
             component="img"
             height="140"
-            // image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+            
             image={props.image}
             alt="green iguana"
           />
