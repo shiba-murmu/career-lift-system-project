@@ -62,39 +62,19 @@ function JobContentRender() {
       {/* Mobile View */}
       <div>
         <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5">
-            <TextShow>
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
               <ContentCards heading="UI/UX designer" />
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Software Engineer" />
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Graphics Designer"/>
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Data Scientist" />
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Product Manager" />
-            </TextShow>
           </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-5 ">
-            <TextShow>
+          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
               <ContentCards heading="Graphic Designer" />
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Data Manager"/>
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Database Administer"/>
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Software Tester" />
-            </TextShow>
-            <TextShow>
               <ContentCards heading="Tester"/>
-            </TextShow>
           </div>
         </div>
       </div>

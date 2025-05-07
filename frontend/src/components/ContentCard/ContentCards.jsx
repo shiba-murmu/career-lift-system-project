@@ -108,7 +108,7 @@ function ContentCards(props) {
       </div>
 
       {/* Mobile view */}
-      <div className="w-full flex flex-row md:hidden bg-gray-300 shadow-md dark:bg-neutral-800 rounded-lg p-2 mt-4 mb-4">
+      <div className="w-full flex flex-row md:hidden bg-gray-300 shadow-md dark:bg-neutral-800 rounded-lg p-2 ">
         <div className="w-1/3 flex justify-start ml-2 items-center">
           {/* Company Logo */}
           <img
