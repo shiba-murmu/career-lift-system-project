@@ -28,7 +28,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-0.5 grid place-content-center rounded-full   transition-all  duration-300  "
+      className=" grid place-content-center rounded-full   transition-all  duration-300  "
     >
       {theme === 'light' ? <NightsStayIcon sx = {{color : 'blue' , fontSize : '18px'}} /> : <LightModeIcon sx = {{color : 'white' , fontSize : '18px'}} />}
       <span className="sr-only">Toggle theme</span>
