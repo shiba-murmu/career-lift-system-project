@@ -88,7 +88,7 @@ function Header() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AutoStoriesIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: isDark ? "#ffffff" : "#9c27b0" }}
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: isDark ? "#0a72cb" : "#9c27b0" }}
           />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
