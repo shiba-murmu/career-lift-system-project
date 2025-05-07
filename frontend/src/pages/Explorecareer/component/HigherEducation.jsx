@@ -1,8 +1,6 @@
 import React from "react";
 import CareerSideBar from "../CareerSideBar";
 import PropTypes from "prop-types";
-// import ContentCards from "../ContentCards";
-// import ContentCards from "../ContentCards";
 import ContentCards from "../../../components/ContentCard/ContentCards";
 function HigherEducation(props) {
   const FilterBox = () => {
