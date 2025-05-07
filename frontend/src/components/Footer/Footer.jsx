@@ -9,11 +9,11 @@ function Footer() {
   return (
     <>
       {/* <!-- Footer container --> */}
-      <footer className="bg-[#ffffff] text-gray-800 relative text-center text-surface/75 dark:bg-[#313131] dark:text-white   lg:text-left">
+      <footer className="bg-[#DDF5FF] text-gray-800 relative text-center text-surface/75 dark:bg-[#313131] dark:text-white   lg:text-left">
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-[#1B1B1B] dark:text-white lg:text-left"> */}
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-[#1976D2] dark:text-white lg:text-left"> */}
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-blue-900 dark:text-white/75 lg:text-left"> */}
-        <div className="flex items-center bg-blue-900 dark:bg-neutral-900 justify-center  p-6 lg:justify-between">
+        <div className="flex items-center bg-[#E0E8FF] dark:bg-neutral-900 justify-center  p-6 lg:justify-between">
           <div className="me-12 hidden lg:block">
             <span>Get connected with us on social networks:</span>
           </div>
@@ -22,7 +22,7 @@ function Footer() {
             {/* theme toggle */}
             <a
               href="#!"
-              className="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-yellow-300 transition duration-300 ease-in-out"
+              className="me-6 [&>svg]:h-4 [&>svg]:w-4 transition duration-300 ease-in-out"
             >
               <ThemeToggle />
             </a>
@@ -34,7 +34,7 @@ function Footer() {
               {/* Facebook */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
+                fill="blue"
                 viewBox="0 0 320 512"
               >
                 {/* <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. --> */}
@@ -62,7 +62,7 @@ function Footer() {
               {/* Instagram */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
+                fill="#f0500f"
                 viewBox="0 0 448 512"
               >
                 {/* <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. --> */}
@@ -76,7 +76,7 @@ function Footer() {
               {/* LinkedIn */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
+                fill="blue"
                 viewBox="0 0 448 512"
               >
                 {/* <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. --> */}

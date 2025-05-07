@@ -1,5 +1,6 @@
 import LightModeIcon from '@mui/icons-material/LightMode';
-import ModeNightIcon from '@mui/icons-material/ModeNight';
+// import ModeNightIcon from '@mui/icons-material/ModeNight';
+import NightsStayIcon from '@mui/icons-material/NightsStay';
 import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
@@ -27,9 +28,10 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-0.5 grid place-content-center rounded-full bg-neutral-400 hover:scale-105 hover:bg-neutral-200 transition-all  duration-300  text-black"
+      className="p-0.5 grid place-content-center rounded-full   transition-all  duration-300  "
     >
-      {theme === 'light' ? <ModeNightIcon sx = {{color : 'black' , fontSize : '15px'}} /> : <LightModeIcon sx = {{color : 'black' , fontSize : '15px'}} />}
+      {theme === 'light' ? <NightsStayIcon sx = {{color : 'blue' , fontSize : '18px'}} /> : <LightModeIcon sx = {{color : 'white' , fontSize : '18px'}} />}
+      <span className="sr-only">Toggle theme</span>
     </button>
   );
 };

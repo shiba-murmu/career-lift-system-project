@@ -81,13 +81,14 @@ function Header() {
       position="relative"
       sx={{
         zIndex: 1000,
-        backgroundColor: isDark ? "#313131" : "#000a58",
+        backgroundColor: isDark ? "#313131" : "#DDF5FF",
+        boxShadow: isDark ? "0 0 10px rgba(0, 0, 0, 0.5)" : "none",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AutoStoriesIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: isDark ? "#ffffff" : "#9c27b0" }}
           />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -98,7 +99,7 @@ function Header() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: isDark ? "#ffffff" : "#000000" }} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -123,14 +124,14 @@ function Header() {
                   style={{ textDecoration: "none" }}
                 >
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                    <Typography sx={{ textAlign: "center", color: isDark ? "#ffffff" : "#000000" }}>{page}</Typography>
                   </MenuItem>
                 </Link>
               ))}
             </Menu>
           </Box>
           <AutoStoriesIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: isDark ? "#ffffff" : "#9c27b0" }}
           />
           <Typography
             variant="h5"
@@ -142,9 +143,9 @@ function Header() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "Open Sans",
-              fontWeight: 400,
+              fontWeight: 800,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: isDark ? "#ffffff" : "#6062fe",
               textDecoration: "none",
             }}
           >
@@ -165,7 +166,7 @@ function Header() {
               >
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: isDark ? "#ffffff" : "#000000", display: "block" }}
                 >
                   {page}
                 </Button>
@@ -197,7 +198,7 @@ function Header() {
               {settings.map((setting) => (
                 <Link key={setting} to={`/${setting.toLowerCase()}`}>
                   <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography sx={{ textAlign: "center" }}>
+                    <Typography sx={{ textAlign: "center", color: isDark ? "#ffffff" : "#000000" }}>
                       {setting}
                     </Typography>
                   </MenuItem>
