@@ -9,7 +9,7 @@ function ArticleAndAdvice() {
   // this page will be design later.. when the backend is ready..
   // for now, it will be a placeholder page with some dummy content
   return (
-    <div className="bg-gray-100 min-h-screen p-6">
+    <div className="bg-[#e0e8ff] dark:bg-neutral-900 min-h-screen p-6">
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Article and Advice</h1>
         <p className="text-gray-600 mb-6">
