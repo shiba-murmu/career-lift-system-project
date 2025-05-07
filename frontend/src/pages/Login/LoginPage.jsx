@@ -2,14 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import BackgroundParticles from "../../components/UI/particle/BackgroundParticles";
+import { useState } from "react";
 
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"; // For password visibility off
+import VisibilityIcon from "@mui/icons-material/Visibility"; // For password visibility on
 
 function LoginPage() {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <>
-    
       <BackgroundParticles />
-      <section className="h-[60vh] relative  p-3 md:p-0 md:h-screen  flex items-center justify-center" style={{fontFamily : 'Open sans', fontWeight : 'bold'}}>
+      <section
+        className="h-[60vh] relative  p-3 md:p-0 md:h-screen  flex items-center justify-center"
+        style={{ fontFamily: "Open sans", fontWeight: "bold" }}
+      >
         <div className="bg-white dark:bg-neutral-800 dark:shadow-none shadow-neutral-500 rounded-lg shadow-lg p-13 w-full md:w-1/4">
           <h1
             className="md:text-5xl text-4xl font-bold mb-6 text-center text-[#1976d2] dark:text-[#90caf9]"
@@ -41,12 +47,21 @@ function LoginPage() {
               >
                 Password
               </label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter your password"
-                className="p-2 placeholder:text-gray-400 placeholder:placeholder-opacity-70  rounded-sm md:rounded-md border-1 md:border-2 border-gray-300 w-full required"
-              />
+              <div className="relative">
+                <input
+                  id="password"
+                  placeholder="Enter your password"
+                  type={showPassword ? "text" : "password"}
+                  className="p-2 placeholder:text-gray-400 placeholder:placeholder-opacity-70 rounded-sm md:rounded-md border-1 md:border-2 border-gray-300 w-full required"
+                />
+                <button
+                  type="button"
+                  className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-white focus:outline-none"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                </button>
+              </div>
             </div>
 
             <Button
@@ -67,10 +82,7 @@ function LoginPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default LoginPage
-
-
-
+export default LoginPage;
