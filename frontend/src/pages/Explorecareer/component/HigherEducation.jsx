@@ -9,15 +9,18 @@ import CareerSideBar from "../CareerSideBar";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 function For_Higher_Education_Cards(props) {
-  
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea component={Link} to={`/education/1/post/${props.heading}`}>
+        <CardActionArea
+          component={Link}
+          to={`/education/1/post/${props.heading}`}
+        >
           <CardMedia
             component="img"
             height="140"
-            image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+            // image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+            image={props.image}
             alt="green iguana"
           />
           <CardContent>
@@ -35,7 +38,7 @@ function For_Higher_Education_Cards(props) {
   );
 }
 
-function HigherEducation() {
+function HigherEducation({ id }) {
   const FilterBox = () => {
     return (
       <div className="flex justify-center mb-0 md:mb-4 w-[100%] dark:bg-neutral-900 p-4">
@@ -50,68 +53,401 @@ function HigherEducation() {
       </div>
     );
   };
-  return (
-    <>
-      <FilterBox />
-      <div className="text-center">Recommended Higher Education for you</div>
-      <div className="md:flex hidden md:gap-4 mt-4">
-        {/* Sidebar */}
-        <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
-          <CareerSideBar />
-        </div>
-        {/* Main Content */}
-        <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-            <For_Higher_Education_Cards heading="Software Engineer" />
-            <For_Higher_Education_Cards heading="Data Scientist" />
-            <For_Higher_Education_Cards heading="Web Developer" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <For_Higher_Education_Cards heading="Network Engineer" />
-            <For_Higher_Education_Cards heading="System Administrator" />
-            <For_Higher_Education_Cards heading="Cloud Engineer" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <For_Higher_Education_Cards heading="DevOps Engineer" />
-            <For_Higher_Education_Cards heading="Business Analyst" />
-            <For_Higher_Education_Cards heading="IT Support Specialist" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <For_Higher_Education_Cards heading="Cybersecurity Analyst" />
-            <For_Higher_Education_Cards heading="Database Administrator" />
-            <For_Higher_Education_Cards heading="Game Developer" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <For_Higher_Education_Cards heading="Mobile App Developer" />
-            <For_Higher_Education_Cards heading="Cloud Architect" />
-            <For_Higher_Education_Cards heading="AI/ML Engineer" />
-          </div>
-        </div>
-      </div>
+  const idbased_rendering = (id) => {
+    switch (id) {
+      case "1":
+        // matriculation level education
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">
+              Recommended Higher Education for you
+            </div>
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+                <CareerSideBar />
+              </div>
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <For_Higher_Education_Cards
+                    heading="Software Engineer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Data Scientist"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Web Developer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Network Engineer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="System Administrator"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Cloud Engineer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="DevOps Engineer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Business Analyst"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="IT Support Specialist"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Cybersecurity Analyst"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Database Administrator"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Game Developer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Mobile App Developer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Cloud Architect"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="AI/ML Engineer"
+                    image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                  />
+                </div>
+              </div>
+            </div>
 
-      {/* Mobile view */}
+            {/* Mobile view */}
 
-      <div>
-        <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-          <For_Higher_Education_Cards heading="Software Engineer" />
-          <For_Higher_Education_Cards heading="Data Scientist" />
-          <For_Higher_Education_Cards heading="Web Developer" />
-          <For_Higher_Education_Cards heading="Network Engineer" />
-          <For_Higher_Education_Cards heading="System Administrator" />
-          <For_Higher_Education_Cards heading="Cloud Engineer" />
-          <For_Higher_Education_Cards heading="DevOps Engineer" />
-          <For_Higher_Education_Cards heading="Business Analyst" />
-          <For_Higher_Education_Cards heading="IT Support Specialist" />
-          <For_Higher_Education_Cards heading="Cybersecurity Analyst" />
-          <For_Higher_Education_Cards heading="Database Administrator" />
-          <For_Higher_Education_Cards heading="Game Developer" />
-          <For_Higher_Education_Cards heading="Mobile App Developer" />
-          <For_Higher_Education_Cards heading="Cloud Architect" />
-          <For_Higher_Education_Cards heading="AI/ML Engineer" />
-        </div>
-      </div>
-    </>
-  );
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <For_Higher_Education_Cards
+                  heading="Software Engineer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Data Scientist"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Web Developer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Network Engineer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards heading="System Administrator" />
+                <For_Higher_Education_Cards
+                  heading="Cloud Engineer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="DevOps Engineer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Business Analyst"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="IT Support Specialist"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Cybersecurity Analyst"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Database Administrator"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Game Developer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Mobile App Developer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Cloud Architect"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+                <For_Higher_Education_Cards
+                  heading="AI/ML Engineer"
+                  image="https://liet.in/images/lloyd_eng/website/img/blog/career-after-b-tech-computer-science.jpeg"
+                />
+              </div>
+            </div>
+          </>
+        );
+      case "2":
+        // Intermediate level education
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">
+              Recommended Intermediate Level Education for you
+            </div>
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+                <CareerSideBar />
+              </div>
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <For_Higher_Education_Cards
+                    heading="Intermediate Science"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Intermediate Commerce"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Intermediate Arts"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Diploma in Engineering"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Diploma in IT"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Diploma in Management"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Computer Applications"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Accounting"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Graphic Design"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in Electronics"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in Mechanics"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in Healthcare"
+                    image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile view */}
+
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <For_Higher_Education_Cards
+                  heading="Intermediate Science"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Intermediate Commerce"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Intermediate Arts"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Diploma in Engineering"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Diploma in IT"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Diploma in Management"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Computer Applications"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Accounting"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Graphic Design"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in Electronics"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in Mechanics"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in Healthcare"
+                  image="https://collegevidya.com/blog/wp-content/uploads/2022/07/Top-Professional-Courses-After-Class-12th-Arts-Humanities.jpg"
+                />
+              </div>
+            </div>
+          </>
+        );
+      case "3":
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">
+              Recommended Matriculation Level Education for you
+            </div>
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+                <CareerSideBar />
+              </div>
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <For_Higher_Education_Cards
+                    heading="High School Science"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="High School Commerce"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="High School Arts"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in IT"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in Mechanics"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Vocational Training in Healthcare"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Basic Computer Skills"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Office Management"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                  <For_Higher_Education_Cards
+                    heading="Certificate in Graphic Design"
+                    image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile view */}
+
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                <For_Higher_Education_Cards
+                  heading="High School Science"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="High School Commerce"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="High School Arts"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in IT"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in Mechanics"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Vocational Training in Healthcare"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Basic Computer Skills"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Office Management"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+                <For_Higher_Education_Cards
+                  heading="Certificate in Graphic Design"
+                  image="https://velammalponneri.com/images/2022/foundation_courses.jpg"
+                />
+              </div>
+            </div>
+          </>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return <>{idbased_rendering(id)}</>;
 }
 
 HigherEducation.defaultProps = {
