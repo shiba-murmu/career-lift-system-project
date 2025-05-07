@@ -25,7 +25,7 @@ function JobContentRender() {
 
       <div className="md:flex hidden md:gap-4 mt-4">
         {/* Sidebar */}
-        <div className="md:w-2/12 bg-gray-200 p-4 dark:bg-neutral-800 rounded-r-2xl hidden md:block">
+        <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
           <CareerSideBar />
         </div>
 
