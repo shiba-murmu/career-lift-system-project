@@ -23,14 +23,14 @@ function SectionTwo() {
    */
   return (
     <>
+      <BackgroundParticles />
       <div
-        className="h-64 md:min-h-[70vh] w-full flex justify-center flex-col items-center"
+        className="bg-[#AAB8CB] dark:bg-neutral-800 h-64 md:min-h-[70vh] w-full flex justify-center flex-col items-center"
         style={{ position: "relative", overflow: "hidden" }}
       >
-        <BackgroundParticles />
-        <div className="text-center flex  flex-col justify-center items-center h-full relative">
+        <div className="text-center  flex  flex-col justify-center items-center h-full ">
           <h1
-            className="text-2xl md:text-5xl text-amber-400"
+            className="text-2xl md:text-7xl text-[#1b1d00] dark:text-white"
             style={{
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: "bolder",
@@ -39,7 +39,7 @@ function SectionTwo() {
             CAREER LIFT OPPORTUNITY
           </h1>
           <h1
-            className="text-2xl md:text-5xl font-bold mt-2 text-amber-400"
+            className="text-2xl md:text-7xl font-bold mt-2  text-[#1b1d00] dark:text-white"
             style={{
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: "bolder",
@@ -49,7 +49,7 @@ function SectionTwo() {
           </h1>
           <div className="text-center pt-2 px-5 flex flex-col relative">
             <p
-              className="text-sm md:text-lg text-white dark:text-blue-600"
+              className="text-sm md:text-lg text-blue-900 dark:text-blue-600"
               style={{
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: "SemiBold",
@@ -58,7 +58,7 @@ function SectionTwo() {
               Career lift is the platform where you can explore a wide range of
             </p>
             <p
-              className="text-sm md:text-lg text-white dark:text-blue-600 "
+              className="text-sm md:text-lg text-blue-900 dark:text-blue-600 "
               style={{
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: "SemiBold",
@@ -82,14 +82,14 @@ function SectionThree() {
   return (
     <>
       {/* <SectionThree /> */}
-      <div className=" relative z-50  min-h-screen bg-[#2D1D3D] dark:bg-neutral-900 py-10 w-full md:grid md:">
+      <div className=" relative z-50  min-h-screen bg-[#e0e8ff] dark:bg-neutral-900 py-10 w-full md:grid md:">
         {/* <BackgroundParticles /> */}
         <div className="md:flex px-5 md:justify-center md:items-center">
           <div className="text-start relative md:w-1/2 px-10 flex flex-col h-96 justify-center">
             <div>
               {/* For heading divs */}
               <h1
-                className="text-2xl md:text-5xl font-bold text-white"
+                className="text-2xl md:text-5xl font-bold text-black"
                 style={{
                   fontFamily: "'Open Sans', sans-serif",
                   fontWeight: "bolder",
@@ -102,7 +102,7 @@ function SectionThree() {
             </div>
             <TextShow>
               <p
-                className="text-sm md:text-lg text-white  font-light leading-relaxed"
+                className="text-sm md:text-lg text-blue-950  font-bold leading-relaxed"
                 style={{
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: "normal",
@@ -117,7 +117,7 @@ function SectionThree() {
             </TextShow>
             <TextShow>
               <p
-                className="text-sm md:text-lg text-white  font-light leading-relaxed"
+                className="text-sm md:text-lg text-blue-950  font-bold leading-relaxed"
                 style={{
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: "SemiBold",
