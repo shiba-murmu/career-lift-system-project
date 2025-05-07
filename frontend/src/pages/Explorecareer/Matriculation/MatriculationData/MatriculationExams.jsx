@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ExamExplore from '../../component/ExamExplore'
 function MatriculationExams() {
   return (
-    <div>MatriculationExams</div>
+    <>
+      <ExamExplore />
+    </>
   )
 }
 

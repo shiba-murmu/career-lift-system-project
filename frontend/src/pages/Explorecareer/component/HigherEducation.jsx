@@ -9,6 +9,7 @@ import CareerSideBar from "../CareerSideBar";
 import PropTypes from "prop-types";
 
 function For_Higher_Education_Cards(props) {
+  
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>

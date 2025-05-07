@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ExamExplore from '../../component/ExamExplore'
 function IntermediateExams() {
   return (
-    <div>IntermediateExams</div>
+    <>
+      <ExamExplore />
+    </>
   )
 }
 
