@@ -22,7 +22,7 @@ function ContentCards(props) {
       {/* Main Card Container */}
 
       <div
-        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-4xl dark:bg-neutral-800 shadow-xl dark:shadow-0 p-5 h-[20.5rem] w-100% md:w-[25%]"
+        className="hidden md:block  bg-gray-300 dark:border-gray-500 rounded-4xl dark:bg-neutral-800 shadow-xl dark:shadow-0 p-5 h-[25.5em] w-100% md:w-[25%]"
         style={{ fontFamily: "Open sans , " }}
       >
         {/* Bookmark Button */}
@@ -48,24 +48,24 @@ function ContentCards(props) {
           {/* Experience */}
           <div>
             <PeopleOutlineIcon fontSize="small" style={{ color: "blue" }} />
-            <span className="text-[4px] font-bold ml-1">1 - 2 Years</span>
+            <span className="text-[4px] font-thin">1 - 2 Years</span>
           </div>
 
           {/* Job Type */}
           <div className="flex items-center gap-2">
             <AccessTimeIcon fontSize="small" style={{ color: "green" }} />
-            <span className="text-[4px] font-bold">Full Time</span>
+            <span className="text-[4px] font-thin">Full Time</span>
           </div>
 
           <div>
             <LocationPinIcon fontSize="small" style={{ color: "red" }} />
-            <span className="text-[4px] font-bold">Remote</span>
+            <span className="text-[4px] font-thin dark:text-gray-300">India</span>
           </div>
         </div>
 
         {/* Job Description */}
         <div>
-          <p className="text-[4px] text-gray-600 dark:text-gray-300">
+          <p className="text-[16px] text-gray-600 dark:text-gray-300">
             We are looking for a creative and detail-oriented UX/UI Designer to
             join our team. The ideal candidate will have experience in designing
             user-friendly interfaces and a strong understanding of design
