@@ -70,7 +70,7 @@ function ExploreCareer() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="bg-[#e0e8ff] dark:bg-neutral-800">
         {/* Main div for the Career paths */}
         {/* ***************************************************************************************************************** */}
         <div className="flex md:pb-30 pt-10 p-3">
