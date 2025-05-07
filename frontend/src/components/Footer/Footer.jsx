@@ -9,7 +9,7 @@ function Footer() {
   return (
     <>
       {/* <!-- Footer container --> */}
-      <footer className="bg-[#000A58] text-white relative text-center text-surface/75 dark:bg-[#313131] dark:text-white   lg:text-left">
+      <footer className="bg-[#ffffff] text-gray-800 relative text-center text-surface/75 dark:bg-[#313131] dark:text-white   lg:text-left">
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-[#1B1B1B] dark:text-white lg:text-left"> */}
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-[#1976D2] dark:text-white lg:text-left"> */}
         {/* <footer className="bg-zinc-50 relative text-center text-surface/75 dark:bg-blue-900 dark:text-white/75 lg:text-left"> */}
@@ -131,7 +131,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="explore career"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className=" transition duration-300 hover:text-yellow-500 ease-in-out"
                 >
                   Career Explorer
                 </a>
@@ -139,7 +139,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="ai assistant"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className="hover:text-amber-500 transition duration-300 ease-in-out"
                 >
                   AI based suggestion
                 </a>
@@ -147,7 +147,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="skill test"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className="hover:text-amber-500 transition duration-300 ease-in-out"
                 >
                   Test your skills
                 </a>
@@ -163,7 +163,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="home"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className="hover:text-amber-500 transition duration-300 ease-in-out"
                 >
                   Home
                 </a>
@@ -171,7 +171,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="profile"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className="hover:text-amber-500 transition duration-300 ease-in-out"
                 >
                   Profile
                 </a>
@@ -179,7 +179,7 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="settings"
-                  className="hover:text-amber-300 transition duration-300 ease-in-out"
+                  className="hover:text-amber-500 transition duration-300 ease-in-out"
                 >
                   Settings
                 </a>
@@ -193,7 +193,7 @@ function Footer() {
               <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                 Contact
               </h6>
-              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-200 transition duration-300 ease-in-out">
+              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-500 transition duration-300 ease-in-out">
                 <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +206,7 @@ function Footer() {
                 </span>
                 Galudih , jamshedpur jharkhand
               </p>
-              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-300 transition duration-300 ease-in-out">
+              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-500 transition duration-300 ease-in-out">
                 <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +219,7 @@ function Footer() {
                 </span>
                 info@careerlift.com
               </p>
-              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-300 transition duration-300 ease-in-out">
+              <p className="mb-4 flex items-center justify-center md:justify-start hover:text-yellow-500 transition duration-300 ease-in-out">
                 <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
                   {/* Phone number here to write */}
                   <svg
