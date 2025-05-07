@@ -32,7 +32,7 @@ function For_Higher_Education_Cards(props) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {props.heading} // Heading for the card
+              {props.heading} 
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
               Lizards are a widespread group of squamate reptiles, with over
