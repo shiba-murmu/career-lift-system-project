@@ -1,6 +1,5 @@
 import React from "react";
 import ContentCards from "../../../components/ContentCard/ContentCards";
-import TextShow from "../../../components/animation/TextShow";
 import CareerSideBar from "../CareerSideBar";
 function JobContentRender() {
   const FilterBox = () => {
