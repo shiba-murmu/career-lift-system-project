@@ -76,6 +76,8 @@ import LoginPage from "./pages/Login/LoginPage"; // Login page
 import Admin from "./admin/adminprofile/Admin"; // Admin profile page
 // import Admin from './admin/adminprofile/Admin'; // Admin profile page (duplicate commented out)
 import EducationSinglePage from "./pages/Explorecareer/Singlepage/EducationSinglePage";
+
+import ExamSinglePage from "./pages/Explorecareer/Singlepage/ExamSinglePage";
 // ****************************************************
 
 // Layout component to manage header and footer visibility
@@ -138,8 +140,8 @@ function App() {
             <Route path="/matriculation/:id" element={<Matriculation />} /> {/* Matriculation page route */}
             <Route path="/graduation/:id" element={<Graduation />} /> {/* Graduation page route */}
             <Route path="/intermediate/:id" element={<Intermediate />} /> {/* Intermediate page route */}
-            <Route path="/education/:id/post/:postId" element={<EducationSinglePage />} /> {/* Education single page route 
-            */}
+            <Route path="/education/:id/post/:postId" element={<EducationSinglePage />} /> {/* Education single page route */}
+            <Route path="/exams/:id/post/:postId" element={<ExamSinglePage />} /> {/* Graduation exams page route */}
           </Routes>
         </Layout>
       </Router>

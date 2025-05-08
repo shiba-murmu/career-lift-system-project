@@ -1,11 +1,13 @@
-import React from 'react'
-import ExamExplore from '../../component/ExamExplore'
+import React from "react";
+import { useParams } from "react-router-dom";
+import ExamExplore from "../../component/ExamExplore";
 function MatriculationExams() {
+  const { id } = useParams();
   return (
     <>
-      <ExamExplore />
+      <ExamExplore id={id} />
     </>
-  )
+  );
 }
 
-export default MatriculationExams
+export default MatriculationExams;
