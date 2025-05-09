@@ -1,6 +1,13 @@
 /* button css only active when button options is clicked */
 
 .btnOptionClick:focus {
-    background-color: rgb(150, 125, 0);
+    /* using this css for light mode here in the page.. */
+    background-color: #E6BBF9;
+    outline: none;
+}
+
+.dark .btnOptionClick:focus {
+    /* using this css for dark mode here in the page.. */
+    background-color: #3b383b;
     outline: none;
 }
