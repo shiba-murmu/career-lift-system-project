@@ -120,37 +120,40 @@ function ContentCards(props) {
       </div>
 
       {/* Mobile view */}
-      <div className="w-full flex flex-row md:hidden bg-gray-300 shadow-md dark:bg-neutral-800 rounded-lg p-2 ">
-        <div className="w-1/3 flex justify-start ml-2 items-center">
-          {/* Company Logo */}
-          <img
-            src="https://yt3.googleusercontent.com/FJI5Lzbf2dMd32xOqhoKpJArJooZhoX6v2qOcFO-wjSZUvs3H9xqq2gK4DQ47X0KnYgf7X2rpdU=s900-c-k-c0x00ffffff-no-rj"
-            alt="Company logo"
-            className="h-[80%] w-[70%] object-cover rounded-md shadow-lg"
-          />
-        </div>
+      <Link to={`/jobdetails/${id}/post/${props.heading}`}>
+        <div className="w-full flex flex-row md:hidden bg-gray-300 shadow-md dark:bg-neutral-800 rounded-lg p-2 ">
+          <div className="w-1/3 flex justify-start ml-2 items-center">
+            {/* Company Logo */}
+            <img
+              src="https://yt3.googleusercontent.com/FJI5Lzbf2dMd32xOqhoKpJArJooZhoX6v2qOcFO-wjSZUvs3H9xqq2gK4DQ47X0KnYgf7X2rpdU=s900-c-k-c0x00ffffff-no-rj"
+              alt="Company logo"
+              className="h-[80%] w-[70%] object-cover rounded-md shadow-lg"
+            />
+          </div>
 
-        <div className="w-2/3 flex flex-col justify-center items-start">
-          <span className="text-xl text-blue-800 font-bold dark:text-blue-300">
-            {props.heading}
-          </span>
-          <div className="flex justify-between w-[100%] mb-4 pr-4">
-            <div className="flex items-center gap-2">
-              <LocationPinIcon fontSize="small" style={{ color: "red" }} />
-              <span className="text-[18px] font-thin dark:text-gray-300">
-                India, Jharkhand
-              </span>
+          <div className="w-2/3 flex flex-col justify-center items-start">
+            <span className="text-xl text-blue-800 font-bold dark:text-blue-300">
+              {props.heading}
+            </span>
+            <div className="flex justify-between w-[100%] mb-4 pr-4">
+              <div className="flex items-center gap-2">
+                <LocationPinIcon fontSize="small" style={{ color: "red" }} />
+                <span className="text-[18px] font-thin dark:text-gray-300">
+                  India, Jharkhand
+                </span>
+              </div>
+              <button className="relative" onClick={toggleBookmark}>
+                {isBookmarked ? (
+                  <TurnedInIcon style={{ color: "gold" }} />
+                ) : (
+                  <TurnedInNotIcon style={{ color: "gray" }} />
+                )}
+              </button>
             </div>
-            <button className="relative" onClick={toggleBookmark}>
-              {isBookmarked ? (
-                <TurnedInIcon style={{ color: "gold" }} />
-              ) : (
-                <TurnedInNotIcon style={{ color: "gray" }} />
-              )}
-            </button>
           </div>
         </div>
-      </div>
+      </Link>
+      {/* Mobile view ends here */}
     </>
   );
 }

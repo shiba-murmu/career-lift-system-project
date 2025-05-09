@@ -38,7 +38,7 @@ function JobContentRender({ id }) {
               {/* Main Content */}
               <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
                 <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-                  <ContentCards heading="UX/UI Designer" />
+                  <ContentCards heading="UI-UX Designer" />
                   <ContentCards heading="Software Engineer" />
                   <ContentCards heading="Data Scientist" />
                 </div>
@@ -69,7 +69,7 @@ function JobContentRender({ id }) {
             <div>
               <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
                 <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
-                  <ContentCards heading="UI/UX designer" />
+                  <ContentCards heading="UI-UX designer" />
                   <ContentCards heading="Software Engineer" />
                   <ContentCards heading="Graphics Designer" />
                   <ContentCards heading="Data Scientist" />
