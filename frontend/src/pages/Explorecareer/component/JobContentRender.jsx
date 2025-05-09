@@ -87,18 +87,136 @@ function JobContentRender({ id }) {
           </>
         );
       case "2":
-        return <>Intermediate jobs</>;
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">Intermediate level jobs for you</div>
+
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800 hidden md:block">
+                <CareerSideBar />
+              </div>
+
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Junior Accountant" />
+                  <ContentCards heading="Sales Executive" />
+                  <ContentCards heading="Customer Support Representative" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Office Assistant" />
+                  <ContentCards heading="Data Entry Operator" />
+                  <ContentCards heading="Retail Associate" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Telecaller" />
+                  <ContentCards heading="Receptionist" />
+                  <ContentCards heading="Field Sales Representative" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Warehouse Assistant" />
+                  <ContentCards heading="Delivery Executive" />
+                  <ContentCards heading="Junior Technician" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Clerk" />
+                  <ContentCards heading="Inventory Manager" />
+                  <ContentCards heading="Assistant Librarian" />
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile View */}
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="Junior Accountant" />
+                  <ContentCards heading="Sales Executive" />
+                  <ContentCards heading="Customer Support Representative" />
+                  <ContentCards heading="Office Assistant" />
+                  <ContentCards heading="Data Entry Operator" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="Retail Associate" />
+                  <ContentCards heading="Telecaller" />
+                  <ContentCards heading="Receptionist" />
+                  <ContentCards heading="Field Sales Representative" />
+                  <ContentCards heading="Warehouse Assistant" />
+                </div>
+              </div>
+            </div>
+          </>
+        );
       case "3":
-        return <>Matriculations jobs </>;
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">Matriculation level jobs for you</div>
+
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800 hidden md:block">
+                <CareerSideBar />
+              </div>
+
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Delivery Boy" />
+                  <ContentCards heading="Office Helper" />
+                  <ContentCards heading="Security Guard" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Peon" />
+                  <ContentCards heading="Housekeeping Staff" />
+                  <ContentCards heading="Gardener" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Driver" />
+                  <ContentCards heading="Warehouse Worker" />
+                  <ContentCards heading="Courier Delivery" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Factory Worker" />
+                  <ContentCards heading="Cleaner" />
+                  <ContentCards heading="Helper" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="Packager" />
+                  <ContentCards heading="Loader" />
+                  <ContentCards heading="Sweeper" />
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile View */}
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="Delivery Boy" />
+                  <ContentCards heading="Office Helper" />
+                  <ContentCards heading="Security Guard" />
+                  <ContentCards heading="Peon" />
+                  <ContentCards heading="Housekeeping Staff" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="Gardener" />
+                  <ContentCards heading="Driver" />
+                  <ContentCards heading="Warehouse Worker" />
+                  <ContentCards heading="Courier Delivery" />
+                  <ContentCards heading="Factory Worker" />
+                </div>
+              </div>
+            </div>
+          </>
+        );
       default:
         return null;
     }
   };
-  return (
-    <>
-      {id__based__rendering(id)}
-    </>
-  );
+  return <>{id__based__rendering(id)}</>;
 }
 
 export default JobContentRender;
