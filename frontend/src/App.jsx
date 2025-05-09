@@ -78,6 +78,8 @@ import Admin from "./admin/adminprofile/Admin"; // Admin profile page
 import EducationSinglePage from "./pages/Explorecareer/Singlepage/EducationSinglePage";
 
 import ExamSinglePage from "./pages/Explorecareer/Singlepage/ExamSinglePage";
+
+import JobSinglePage from "./pages/Explorecareer/Singlepage/JobSinglePage"; // Job Single page
 // ****************************************************
 
 // Layout component to manage header and footer visibility
@@ -142,6 +144,8 @@ function App() {
             <Route path="/intermediate/:id" element={<Intermediate />} /> {/* Intermediate page route */}
             <Route path="/education/:id/post/:postId" element={<EducationSinglePage />} /> {/* Education single page route */}
             <Route path="/exams/:id/post/:postId" element={<ExamSinglePage />} /> {/* Graduation exams page route */}
+            <Route path="/jobdetails/:id/post/:postId" element={<JobSinglePage />} /> {/* Job single page route */}
+            {/* Add more routes as needed */}
           </Routes>
         </Layout>
       </Router>
