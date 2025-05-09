@@ -1,7 +1,7 @@
 import React from "react";
 import ContentCards from "../../../components/ContentCard/ContentCards";
 import CareerSideBar from "../CareerSideBar";
-function JobContentRender() {
+function JobContentRender({ id }) {
   const FilterBox = () => {
     return (
       <div className="flex justify-center mb-0 md:mb-4 w-[100%] dark:bg-neutral-900 p-4">
@@ -16,67 +16,87 @@ function JobContentRender() {
       </div>
     );
   };
+  /**
+   *  Applying id based rendering now..
+   *
+   */
 
+  const id__based__rendering = (id) => {
+    switch (id) {
+      case "1":
+        return (
+          <>
+            <FilterBox />
+            <div className="text-center">Recommended jobs for you</div>
+
+            <div className="md:flex hidden md:gap-4 mt-4">
+              {/* Sidebar */}
+              <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
+                <CareerSideBar />
+              </div>
+
+              {/* Main Content */}
+              <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
+                  <ContentCards heading="UX/UI Designer" />
+                  <ContentCards heading="Software Engineer" />
+                  <ContentCards heading="Data Scientist" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <ContentCards heading="Product Manager" />
+                  <ContentCards heading="Graphic Designer" />
+                  <ContentCards heading="Marketing Specialist" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <ContentCards heading="DevOps Engineer" />
+                  <ContentCards heading="Business Analyst" />
+                  <ContentCards heading="Content Writer" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <ContentCards heading="Cybersecurity Analyst" />
+                  <ContentCards heading="Quality Assurance Tester" />
+                  <ContentCards heading="Database Administrator" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
+                  <ContentCards heading="Mobile App Developer" />
+                  <ContentCards heading="Cloud Architect" />
+                  <ContentCards heading="AI/ML Engineer" />
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile View */}
+            <div>
+              <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="UI/UX designer" />
+                  <ContentCards heading="Software Engineer" />
+                  <ContentCards heading="Graphics Designer" />
+                  <ContentCards heading="Data Scientist" />
+                  <ContentCards heading="Product Manager" />
+                </div>
+                <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
+                  <ContentCards heading="Graphic Designer" />
+                  <ContentCards heading="Data Manager" />
+                  <ContentCards heading="Database Administer" />
+                  <ContentCards heading="Software Tester" />
+                  <ContentCards heading="Tester" />
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      case "2":
+        return <>Intermediate jobs</>;
+      case "3":
+        return <>Matriculations jobs </>;
+      default:
+        return null;
+    }
+  };
   return (
     <>
-      <FilterBox />
-      <div className="text-center">Recommended jobs for you</div>
-
-      <div className="md:flex hidden md:gap-4 mt-4">
-        {/* Sidebar */}
-        <div className="md:w-2/12 bg-[#e0e8ff] p-4 dark:bg-neutral-800  hidden md:block">
-          <CareerSideBar />
-        </div>
-
-        {/* Main Content */}
-        <div className="md:w-10/12 flex flex-wrap justify-around md:h-[100vh] overflow-y-scroll bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3">
-            <ContentCards heading="UX/UI Designer" />
-            <ContentCards heading="Software Engineer" />
-            <ContentCards heading="Data Scientist" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards heading="Product Manager" />
-            <ContentCards heading="Graphic Designer" />
-            <ContentCards heading="Marketing Specialist" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards heading="DevOps Engineer" />
-            <ContentCards heading="Business Analyst" />
-            <ContentCards heading="Content Writer" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards heading="Cybersecurity Analyst" />
-            <ContentCards heading="Quality Assurance Tester" />
-            <ContentCards heading="Database Administrator" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-3 ">
-            <ContentCards heading="Mobile App Developer" />
-            <ContentCards heading="Cloud Architect" />
-            <ContentCards heading="AI/ML Engineer" />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile View */}
-      <div>
-        <div className="md:hidden flex flex-wrap justify-around min-h-[60vh] md:h-[150vh] bg-white dark:bg-neutral-900">
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
-              <ContentCards heading="UI/UX designer" />
-              <ContentCards heading="Software Engineer" />
-              <ContentCards heading="Graphics Designer"/>
-              <ContentCards heading="Data Scientist" />
-              <ContentCards heading="Product Manager" />
-          </div>
-          <div className="flex flex-wrap justify-around p-2 w-[100%] gap-2">
-              <ContentCards heading="Graphic Designer" />
-              <ContentCards heading="Data Manager"/>
-              <ContentCards heading="Database Administer"/>
-              <ContentCards heading="Software Tester" />
-              <ContentCards heading="Tester"/>
-          </div>
-        </div>
-      </div>
+      {id__based__rendering(id)}
     </>
   );
 }

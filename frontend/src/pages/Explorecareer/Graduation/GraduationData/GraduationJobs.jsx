@@ -1,10 +1,11 @@
 import React from 'react'
 import JobContentRender from '../../component/JobContentRender'
-
+import { useParams } from 'react-router-dom'
 function GraduationJobs() {
+  const { id } = useParams();
   return (
     <div>
-      <JobContentRender />
+      <JobContentRender id={id} />
     </div>
   )
 }
