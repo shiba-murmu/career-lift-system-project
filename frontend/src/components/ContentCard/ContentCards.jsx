@@ -156,9 +156,9 @@ function ContentCards(props) {
                 }}
               >
                 {isBookmarked ? (
-                  <TurnedInIcon style={{ color: "gold" , fontSize: '18px' }} />
+                  <TurnedInIcon style={{ color: "gold" , fontSize: '2rem' }} />
                 ) : (
-                  <TurnedInNotIcon style={{ color: "gray" , fontSize: '18px' }} />
+                  <TurnedInNotIcon style={{ color: "gray" , fontSize: '2rem' }} />
                 )}
               </button>
             </div>
