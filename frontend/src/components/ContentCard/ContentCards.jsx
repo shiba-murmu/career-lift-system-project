@@ -142,11 +142,23 @@ function ContentCards(props) {
                   India, Jharkhand
                 </span>
               </div>
-              <button className="relative" onClick={toggleBookmark}>
+              <button
+                className="relative"
+                onClick={(e) => {
+                  // Prevent default action and stop propagation
+                  /**
+                   * This will not allow the click event to bubble up to the parent elements,
+                   * which could trigger other click events or cause unwanted behavior.
+                   */
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleBookmark();
+                }}
+              >
                 {isBookmarked ? (
-                  <TurnedInIcon style={{ color: "gold" }} />
+                  <TurnedInIcon style={{ color: "gold" , fontSize: '18px' }} />
                 ) : (
-                  <TurnedInNotIcon style={{ color: "gray" }} />
+                  <TurnedInNotIcon style={{ color: "gray" , fontSize: '18px' }} />
                 )}
               </button>
             </div>
