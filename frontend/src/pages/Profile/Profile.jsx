@@ -2,8 +2,21 @@ import React from "react";
 import "./profile.css"; // Your custom styles if needed
 import IconButtonWithBadge from "../../components/UI/button/IconButtonWithBadge";
 
+
+
+
 function MoreContent() {
-  return <></>;
+  return (
+    <>
+      <div>
+        <div>
+          <div>Added</div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 function Profile() {
