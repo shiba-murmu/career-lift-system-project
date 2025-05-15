@@ -258,7 +258,7 @@ function Footer() {
 
         {/* <!--Copyright section--> */}
         <div className="bg-black/5 p-6 text-center">
-          <span>© 2023 Copyright:</span>
+          <span>© 2025 Copyright:</span>
           <a className="font-semibold" href="https://tw-elements.com/">
             CAREER Lift
           </a>
