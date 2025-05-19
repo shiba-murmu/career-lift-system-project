@@ -28,9 +28,9 @@ function Profile() {
       {/* Profile Image Overlapping */}
       <div className="flex justify-center -mt-20 md:-mt-28">
         <img
-          src="/images/myimage.jpg"
+          src="/images/Online.jpg"
           alt="User"
-          className="h-44 w-44 md:h-60 md:w-60 rounded-full md:rounded-[25%] object-cover shadow-lg"
+          className="h-44 w-44 md:h-60 md:w-60 rounded-full md:rounded-[40%] md:border-6 md:border-[#7bdaeb] object-cover shadow-xl shadow-[#1976d2] dark:shadow-[#00447f]"
         />
       </div>
 
@@ -41,7 +41,8 @@ function Profile() {
             className="text-3xl text-center md:text-4xl md:font-bold"
             style={{ fontFamily: "Open Sans, sans-serif" }}
           >
-            Shivani Singh
+            <span className="text-[#1976d2] dark:text-[#90caf9]">A</span>ishu 
+            <span className="text-[#1976d2] dark:text-[#90caf9]"> K</span>erketta
           </h2>
           <p className="mt-2 text-center text-lg dark:text-amber-400">
             A passionate software developer.

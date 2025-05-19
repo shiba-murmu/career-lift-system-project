@@ -1,9 +1,9 @@
 import React from "react";
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8" style={{ fontFamily: "Open sans, sans-serif" , fontWeight: "bold"}}>
+    <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8" style={{ fontFamily: "Open sans, sans-serif", fontWeight: "bold" }}>
       <div className="bg-white dark:bg-neutral-800 shadow-md rounded-lg p-6 sm:p-10 w-full max-w-2xl">
         <h1 className="text-3xl font-extrabold text-center text-[#90caf9] mb-6">
           Contact Us
@@ -61,14 +61,14 @@ function Contact() {
           >
             Send Message
           </button> */}
-          <Button 
+          <Button
             variant="contained"
             color="primary"
             type="submit"
             size="large"
             fullWidth
             style={{
-              
+
               fontFamily: "Open sans, sans-serif",
               fontWeight: "normal",
             }}
