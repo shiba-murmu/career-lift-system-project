@@ -54,18 +54,18 @@ function ContentCards(props) {
           {/* Experience */}
           <div>
             <PeopleOutlineIcon fontSize="small" style={{ color: "blue" }} />
-            <span className="text-[4px] font-thin">1 - 2 Years</span>
+            <span className="text-[13px] font-thin">1 - 2 Years</span>
           </div>
 
           {/* Job Type */}
           <div className="flex items-center gap-2">
             <AccessTimeIcon fontSize="small" style={{ color: "green" }} />
-            <span className="text-[4px] font-thin">Full Time</span>
+            <span className="text-[13px] font-thin">Full Time</span>
           </div>
 
           <div>
             <LocationPinIcon fontSize="small" style={{ color: "red" }} />
-            <span className="text-[4px] font-thin dark:text-gray-300">
+            <span className="text-[13px] font-thin dark:text-gray-300">
               India
             </span>
           </div>
@@ -85,14 +85,14 @@ function ContentCards(props) {
         <div className="flex justify-between items-center mt-2">
           <div className="flex items-center gap-2">
             <AccessAlarmIcon fontSize="small" style={{ color: "orange" }} />
-            <span className="text-[4px] font-thin text-blue-600 dark:text-amber-400">
+            <span className="text-[13px] font-thin text-blue-600 dark:text-amber-400">
               Posted on: Oct 10, 2023
             </span>
           </div>
         </div>
 
         {/* Skills Section */}
-        <div className="flex justify-between text-[4px] items-center mt-4 mb-4">
+        <div className="flex justify-between text-[13px] items-center mt-4 mb-4">
           <div className="flex items-center bg-fuchsia-400 dark:bg-neutral-700 p-1 px-2 rounded-2xl font-light">
             Javascript
           </div>
@@ -111,7 +111,7 @@ function ContentCards(props) {
         <div>
           <Link to={`/jobdetails/${id}/post/${props.heading}`}>
             <button className="bg-amber-800 dark:bg-blue-900 text-white font-bold py-2 px-4 rounded-xl w-full flex items-center justify-center hover:bg-amber-700 dark:hover:bg-blue-700 transition duration-300 ease-in-out">
-              <span className="text-[4px] text-gray-200 dark:text-gray-300 font-bold">
+              <span className="text-[12px] text-gray-200 dark:text-gray-300 font-bold">
                 View Details
               </span>
             </button>
