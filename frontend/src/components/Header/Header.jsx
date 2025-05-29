@@ -143,8 +143,8 @@ function Header() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "Open Sans",
-              fontWeight: 800,
-              letterSpacing: ".3rem",
+              fontWeight: 600,
+              letterSpacing: ".1rem",
               color: isDark ? "#29b6f6" : "#1a73e8",
               textDecoration: "none",
             }}
