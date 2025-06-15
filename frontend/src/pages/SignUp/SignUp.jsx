@@ -7,14 +7,12 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 /**
  * Spinner component for loading state
  */
-// import SpinnerUi from "../../components/spinner/SpinnerUi";
 import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 
 /**
  * 
  * @returns  Alert component that displays success or error messages
  */
-// import SuccessAlert from "../../components/alerts/success_no_close/SuccessAlert";
 import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 /**
  * 
