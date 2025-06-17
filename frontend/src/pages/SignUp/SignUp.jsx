@@ -66,6 +66,9 @@ function SignUp() {
         } else if (password.length < 6) {
             setErrorMsg("Password must be at least 6 characters long.");
             return;
+        } else if (password.length > 20) {
+            setErrorMsg("Password must be less than 20 characters long.");
+            return;
         } else if (!/\S+@\S+\.\S+/.test(email)) {
             setErrorMsg("That doesn’t look like a valid email address. Please try again.");
             return;
