@@ -27,8 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in production
+
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React local dev server
+    "http://localhost:5173",  # React local dev server
     # Add production frontend URL later
 ]
 
@@ -46,7 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
+    'corsheaders', 
+    'rest_framework',
+    'users',  # Custom app for user management
 
 ]
 

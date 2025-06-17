@@ -50,7 +50,8 @@ function SignUp() {
         e.preventDefault();
         setSuccessMsg(''); // Reset success message
         setErrorMsg(''); // Reset error message
-
+        console.log('Form data submitted:', formData);
+        // 🔥 Basic validation before sending data to the backend
         if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirm_password) {
             setErrorMsg("All fields are required.");
             return;
@@ -69,9 +70,37 @@ function SignUp() {
             setErrorMsg("That doesn’t look like a valid email address. Please try again.");
             return;
         }
+
         // ************************************************
         // 🔥 Send data to the backend
         setLoading(true);
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/users/register/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+            if (data.status === 'success') {
+                // 🔥 Set success message
+                setSuccessMsg(data.message);
+                // 🔥 Clear form data
+                setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
+                // 🔥 Redirect to login page
+                navigate('/login');
+            } else {
+                // 🔥 Set error message
+                setErrorMsg(data.message);
+            }
+        } catch (error) {
+            // 🔥 Handle any errors that occur during the fetch
+            console.error("Error during signup:", error);
+            setErrorMsg("An error occurred while signing up. Please try again later.");
+        }
+        // Set loading state to true while processing
     };
 
 
