@@ -50,7 +50,7 @@ function SignUp() {
         e.preventDefault();
         setSuccessMsg(''); // Reset success message
         setErrorMsg(''); // Reset error message
-        console.log('Form data submitted:', formData);
+        // console.log('Form data submitted:', formData);
         // 🔥 Basic validation before sending data to the backend
         if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirm_password) {
             setErrorMsg("All fields are required.");
