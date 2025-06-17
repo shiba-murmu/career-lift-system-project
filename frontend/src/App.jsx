@@ -8,7 +8,10 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ProtectedData from "./components/ProtectedData/ProtectedData";
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 // *****************************************************************
 /**
  * Here using code for dark themes for whole website
@@ -80,6 +83,7 @@ import EducationSinglePage from "./pages/Explorecareer/Singlepage/EducationSingl
 import ExamSinglePage from "./pages/Explorecareer/Singlepage/ExamSinglePage";
 
 import JobSinglePage from "./pages/Explorecareer/Singlepage/JobSinglePage"; // Job Single page
+
 // ****************************************************
 
 // Layout component to manage header and footer visibility
@@ -123,21 +127,23 @@ function App() {
         <Layout>
           <ScrollToTop /> {/* Scroll to top on route change */}
           <Routes>
+            {/* Public routes */}
             <Route path="/" element={<Landingpage />} /> {/* Landing page route */}
             <Route path="/home" element={<Home />} /> {/* Home page route */}
             <Route path="/about" element={<About />} /> {/* About page route */}
             <Route path="/contact" element={<Contact />} /> {/* Contact page route */}
-            <Route path="/ai assistant" element={<Ai />} /> {/* AI Assistant page route */}
-            <Route path="/skill test" element={<SkillTest />} /> {/* Skill Test page route */}
+            <Route path="/ai assistant" element={<ProtectedData> <Ai /> </ProtectedData>} /> {/* AI Assistant page route */}
+            <Route path="/skill test" element={<ProtectedData> <SkillTest /> </ProtectedData>} /> {/* Skill Test page route */}
             <Route path="/explore career" element={<ExploreCareer />} /> {/* Explore Career page route */}
-            <Route path="/profile" element={<Profile />} /> {/* Profile page route */}
-            <Route path="/settings" element={<Setting />} /> {/* Settings page route */}
-            <Route path="/account" element={<Account />} /> {/* Account page route */}
-            <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard page route */}
+            {/* Private routes */}
+            <Route path="/profile" element={<ProtectedData> <Profile /> </ProtectedData>} /> {/* Profile page route */}
+            <Route path="/settings" element={<ProtectedData> <Setting /> </ProtectedData>} /> {/* Settings page route */}
+            <Route path="/account" element={<ProtectedData> <Account /> </ProtectedData>} /> {/* Account page route */}
+            <Route path="/dashboard" element={<ProtectedData > <Dashboard /> </ProtectedData>} /> {/* Dashboard page route */}
             <Route path="/signup" element={<SignUp />} /> {/* Sign Up page route */}
             <Route path="/article & advice" element={<ArticleAndAdvice />} /> {/* Articles and Advice page route */}
             <Route path="/login" element={<LoginPage />} /> {/* Login page route */}
-            <Route path="/admin" element={<Admin />} /> {/* Admin profile page route */}
+            <Route path="/admin" element={<ProtectedData> <Admin /> </ProtectedData>} /> {/* Admin profile page route */}
             {/* Dynamic routes for specific career paths */}
             <Route path="/matriculation/:id" element={<Matriculation />} /> {/* Matriculation page route */}
             <Route path="/graduation/:id" element={<Graduation />} /> {/* Graduation page route */}
@@ -147,6 +153,7 @@ function App() {
             <Route path="/jobdetails/:id/post/:postId" element={<JobSinglePage />} /> {/* Job single page route */}
             {/* Add more routes as needed */}
           </Routes>
+          <ToastContainer position="bottom-right" autoClose={3000} />
         </Layout>
       </Router>
     </>

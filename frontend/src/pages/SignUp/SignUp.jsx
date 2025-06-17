@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
+// import Link from "@mui/material";
+// import Link from "@mui/material";
+import { Link } from "react-router-dom";
 // import axios from 'axios'; // 🔥 import axios to send data
 import './signup.css';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -21,6 +24,7 @@ import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 import { useNavigate } from "react-router-dom";
 // 🔥 Importing the useNavigate hook to redirect after successful signup
 
+import { toast } from "react-toastify";
 function SignUp() {
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -89,7 +93,14 @@ function SignUp() {
             const data = await response.json();
             if (data.status === 'success') {
                 // 🔥 Set success message
-                setSuccessMsg(data.message);
+                // setSuccessMsg(data.message);
+                toast.success(data.message , 
+                    {
+                        position : "top-right",
+                        autoClose : 3000,
+                        theme : "colored"
+                    }
+                )
                 // 🔥 Clear form data
                 setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
                 // 🔥 Redirect to login page
@@ -247,9 +258,9 @@ function SignUp() {
 
                     <p className="text-sm text-center text-gray-600 dark:text-white mt-4 sm:mt-6">
                         Already have an account?{" "}
-                        <a href="/login" className="text-blue-500 font-semibold hover:underline">
-                            Log in
-                        </a>
+                        <Link to="/login" >
+                            <span className="text-blue-500 font-semibold hover:underline">Login</span>
+                        </Link>
                     </p>
                 </div>
             </div>

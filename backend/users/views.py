@@ -1,11 +1,23 @@
 # users/views.py
 
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view , permission_classes
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth.models import User
 from .serializers import RegisterSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from .serializers import MyTokenObtainPairSerializer
+from rest_framework.permissions import IsAuthenticated
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def profile_view(request):
+    user = request.user
+    return Response({
+        "username" : user.username,
+        "email" : user.email,
+    })
+    
 @api_view(['POST'])
 def register(request):
     serializer = RegisterSerializer(data=request.data)
@@ -16,8 +28,15 @@ def register(request):
             return Response({"status": "error", "message": "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
     if serializer.is_valid():
         serializer.save()
-        return Response({"status": "success", "message": "User registered successfully!"}, status=status.HTTP_201_CREATED)
+        return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
     return Response({"status": "error", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+# @api_view(['POST'])
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
+
+
+
 
 
 
