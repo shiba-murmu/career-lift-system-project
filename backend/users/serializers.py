@@ -13,7 +13,6 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         email = attrs.get("email")  # this is your email input
         password = attrs.get("password")
-        print('email : ', email, 'password : ', password)
 
         user = authenticate(username=email, password=password)
 
