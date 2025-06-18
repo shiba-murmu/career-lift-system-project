@@ -57,7 +57,7 @@ function LoginPage() {
         setLoading(true); // Set loading state to true
         // If validation passes, proceed with the API call
         try {
-            const response = await fetch("https://your-railway-domain.up.railway.appapi/users/login/", {
+            const response = await fetch("https://career-lift-system-project-production.up.railway.app/api/users/login/", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

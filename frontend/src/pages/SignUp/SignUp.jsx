@@ -82,7 +82,7 @@ function SignUp() {
         // 🔥 Send data to the backend
         setLoading(true);
         try {
-            const response = await fetch("https://your-railway-domain.up.railway.app/api/users/register/", {
+            const response = await fetch("https://career-lift-system-project-production.up.railway.app/api/users/register/", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
