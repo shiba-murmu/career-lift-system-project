@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-t2q!1eah=^49t0w^qgyqw5)3nm$bl#a-c6!*00@ef)(0$b$ldq
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://career-lift-system-project-production.up.railway.app']
+ALLOWED_HOSTS = ['career-lift-system-project-production.up.railway.app', '127.0.0.1', 'localhost']
+
 
 CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in production
 
