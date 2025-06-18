@@ -97,7 +97,7 @@ function LoginPage() {
                 <PopupAlert
                     open={true}
                     message={error}
-                    severity="error"
+                    headingMessage="Error"
                     onClose={() => setError('')}
                 />
             )}
@@ -105,7 +105,7 @@ function LoginPage() {
                 <PopupAlert
                     open={true}
                     message={success}
-                    severity="success"
+                    headingMessage="Success"
                     onClose={() => setSuccess('')}
                 />
             )}
