@@ -111,8 +111,12 @@ function SignUp() {
             }
         } catch (error) {
             // 🔥 Handle any errors that occur during the fetch
-            console.error("Error during signup:", error);
+            // console.error("Error during signup:", error);
             setErrorMsg("An error occurred while signing up. Please try again later.");
+            setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
+        } finally {
+            // 🔥 Set loading state to false
+            setLoading(false);
         }
         // Set loading state to true while processing
     };
