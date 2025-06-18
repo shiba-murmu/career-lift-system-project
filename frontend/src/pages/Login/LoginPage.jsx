@@ -11,12 +11,8 @@ import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 
 import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 
-
-
-
-
-
 function LoginPage() {
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     // State to manage password visibility
@@ -24,11 +20,10 @@ function LoginPage() {
     const [success, setSuccess] = useState(''); // State for success messages
     const [loading, setLoading] = useState(false);
 
-    const [spinnerLoading , setSpinnerLoading] = useState(false);
+    const [spinnerLoading, setSpinnerLoading] = useState(false);
 
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
 
-    const [formData , setFormData] = useState({
+    const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
@@ -71,7 +66,7 @@ function LoginPage() {
 
             const data = await response.json();
             // loading(false);
-            console.log('Data : ' , data);
+            console.log('Data : ', data);
             if (response.ok) {
                 setSpinnerLoading(true);
                 // store jwt tokem in localstorage
@@ -89,7 +84,7 @@ function LoginPage() {
         } catch (error) {
             setError('An error occurred while logging in. Please try again.');
         }
-        }
+    }
     return (
         <>
             <BackgroundParticles />

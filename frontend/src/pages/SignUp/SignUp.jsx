@@ -26,6 +26,7 @@ import { useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
 function SignUp() {
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
 
@@ -35,7 +36,6 @@ function SignUp() {
 
     const [loading, setLoading] = useState(false);
 
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
     // 🔥 Form state
     const [formData, setFormData] = useState({
         first_name: '',
