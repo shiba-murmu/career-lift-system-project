@@ -82,7 +82,7 @@ function SignUp() {
         // 🔥 Send data to the backend
         setLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/users/register/', {
+            const response = await fetch("https://your-railway-domain.up.railway.app/api/users/register/", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

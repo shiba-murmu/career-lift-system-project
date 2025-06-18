@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t2q!1eah=^49t0w^qgyqw5)3nm$bl#a-c6!*00@ef)(0$b$ldq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['career-lift-production.up.railway.app']
 
 CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in production
 
