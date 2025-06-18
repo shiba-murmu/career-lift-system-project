@@ -26,13 +26,14 @@ SECRET_KEY = 'django-insecure-t2q!1eah=^49t0w^qgyqw5)3nm$bl#a-c6!*00@ef)(0$b$ldq
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['career-lift-production.up.railway.app']
+ALLOWED_HOSTS = ['https://career-lift-production.up.railway.app']
 
 CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in production
 
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React local dev server
+    "https://career-lift-system.vercel.app/" # For production
     # Add production frontend URL later
 ]
 
