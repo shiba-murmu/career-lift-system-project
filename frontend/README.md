@@ -16,3 +16,7 @@ date : Fri , 4 April ---> Homepage design start..
 Dont't use absolute property until its not necessary so much..
 
 points to remeber here is to screen sm to md changes to 767.20px to 768px ( for medium screen i.e my laptop )..
+
+VITE_API_BASE_URL=http://127.0.0.1:8000  # for development
+
+VITE_API_BASE_URL=https://career-lift-system-project-production.up.railway.app  # for production
