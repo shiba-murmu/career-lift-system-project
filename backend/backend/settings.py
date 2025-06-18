@@ -42,7 +42,7 @@ CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in produc
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React local dev server
-    # "https://career-lift-system.vercel.app/" # For production
+    "https://career-lift-system.vercel.app/" # For production
     # Add production frontend URL later
 ]
 # Optional but helpful:
