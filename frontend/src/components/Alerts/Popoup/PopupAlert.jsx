@@ -61,7 +61,7 @@ function PopupAlert({ message, headingMessage, onClose }) {
             maxWidth="xs"
             fullWidth
         >
-            <DialogTitle id="responsive-dialog-title">
+            <DialogTitle id="responsive-dialog-title" sx={{ color: isDark ? "#ffffff" : "#000000" }}>
                 {headingMessage || "Success"}
             </DialogTitle>
             <DialogContent>
