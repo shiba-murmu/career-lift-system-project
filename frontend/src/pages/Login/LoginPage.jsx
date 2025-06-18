@@ -9,7 +9,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility"; // For password vis
 
 import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 
-
+import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 
 
 
@@ -23,6 +23,10 @@ function LoginPage() {
     const [error, setError] = useState(''); // State for error messages
     const [success, setSuccess] = useState(''); // State for success messages
     const [loading, setLoading] = useState(false);
+
+    const [spinnerLoading , setSpinnerLoading] = useState(false);
+
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
 
     const [formData , setFormData] = useState({
         email: '',
@@ -57,7 +61,7 @@ function LoginPage() {
         setLoading(true); // Set loading state to true
         // If validation passes, proceed with the API call
         try {
-            const response = await fetch("https://career-lift-system-project-production.up.railway.app/api/users/login/", {
+            const response = await fetch(`${BASE_URL}/api/users/login/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,18 +70,21 @@ function LoginPage() {
             });
 
             const data = await response.json();
+            // loading(false);
             console.log('Data : ' , data);
             if (response.ok) {
+                setSpinnerLoading(true);
                 // store jwt tokem in localstorage
                 localStorage.setItem('access', data.access);
                 localStorage.setItem('refresh', data.refresh);
-
+                setFormData({ email: '', password: '' });
                 setSuccess('Login successfull');
-                setFormData({ username: '', password: '' });
                 navigate('/profile');
             }
             else {
-                setError(data.detail);
+                setError(data.non_field_errors);
+                setLoading(false);
+                setFormData({ email: '', password: '' });
             }
         } catch (error) {
             setError('An error occurred while logging in. Please try again.');

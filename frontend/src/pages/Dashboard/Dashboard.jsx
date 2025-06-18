@@ -1,14 +1,15 @@
 import React from "react";
-
+import Logout from "../../components/Logout/Logout";
 function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Header Section */}
       <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
-        <button className="bg-purple-500 text-white px-4 py-2 rounded-lg shadow hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">
+        {/* <button className="bg-purple-500 text-white px-4 py-2 rounded-lg shadow hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">
           Logout
-        </button>
+        </button> */}
+        <Logout />
       </header>
 
       {/* Main Content Section */}

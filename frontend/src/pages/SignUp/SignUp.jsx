@@ -35,7 +35,7 @@ function SignUp() {
 
     const [loading, setLoading] = useState(false);
 
-
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
     // 🔥 Form state
     const [formData, setFormData] = useState({
         first_name: '',
@@ -82,7 +82,7 @@ function SignUp() {
         // 🔥 Send data to the backend
         setLoading(true);
         try {
-            const response = await fetch("https://career-lift-system-project-production.up.railway.app/api/users/register/", {
+            const response = await fetch(`${BASE_URL}/api/users/register/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
