@@ -36,6 +36,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://career-lift-system.vercel.app/" # For production
     # Add production frontend URL later
 ]
+# Optional but helpful:
+CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
