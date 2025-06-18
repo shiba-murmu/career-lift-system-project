@@ -8,10 +8,7 @@ import { toast } from "react-toastify";
 function MoreContent() {
   return (
     <div>
-      <div>
-        <div><Logout /></div>
-        <div></div>
-      </div>
+        <div className=""><Logout /></div>
     </div>
   );
 }
@@ -44,7 +41,7 @@ function Profile() {
         <img
           src="/images/Online.jpg"
           alt="User"
-          className="h-44 w-44 md:h-60 md:w-60 rounded-full md:rounded-[40%] md:border-6 md:border-[#7bdaeb] object-cover shadow-xl shadow-[#1976d2] dark:shadow-[#00447f]"
+          className="h-44 w-44 md:h-60 md:w-60 rounded-full md:rounded-[50%]  object-cover shadow-lg shadow-[#031424] dark:shadow-[#2a3c4b]"
         />
       </div>
 
@@ -62,7 +59,7 @@ function Profile() {
             I am a full-stack web developer with a passion for UI/UX design and writing.
           </p>
 
-          <div className="mt-6 flex flex-col md:flex-row justify-center gap-1">
+          {/* <div className="mt-6 flex flex-col md:flex-row justify-center gap-1">
             <IconButtonWithBadge
               text="CONNECTIONS"
               badgeNumber="5"
@@ -75,7 +72,7 @@ function Profile() {
               badgeColor={"primary"}
               btnColor={"secondary"}
             />
-          </div>
+          </div> */}
         </div>
       </div>
 

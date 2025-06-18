@@ -56,7 +56,7 @@ function Footer() {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/murmujsr/"
+              href="https://www.instagram.com/murmumrm/"
               className="me-6 [&>svg]:h-4 [&>svg]:w-4 hover:text-yellow-300 transition duration-300 ease-in-out"
             >
               {/* Instagram */}
