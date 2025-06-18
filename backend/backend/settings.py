@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+# import decouple import config
+from decouple import config
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,7 +42,7 @@ CORS_ALLOW_ALL_ORIGINS = True # for development only, use with caution in produc
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React local dev server
-    "https://career-lift-system.vercel.app/" # For production
+    # "https://career-lift-system.vercel.app/" # For production
     # Add production frontend URL later
 ]
 # Optional but helpful:
@@ -99,10 +103,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default' : dj_database_url.config(default=config('DATABASE_URL'))
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
