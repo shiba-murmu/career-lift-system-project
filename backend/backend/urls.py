@@ -17,15 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path ,  include
 from . import views
+from django.http import HttpResponse
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
 
+def home(request):
+    return HttpResponse("Welcome to the backend API. Use /api/token/ to obtain JWT tokens.")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),  # This will route the root URL to the index view
+    path('',home),
+    # path('', views.index, name='index'),  # This will route the root URL to the index view
     # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/users/', include('users.urls')),  # Include user management URLs
