@@ -83,6 +83,8 @@ function LoginPage() {
             }
         } catch (error) {
             setError('An error occurred while logging in. Please try again.');
+            setFormData({ email: '', password: '' });
+            setLoading(false);
         }
     }
     return (
