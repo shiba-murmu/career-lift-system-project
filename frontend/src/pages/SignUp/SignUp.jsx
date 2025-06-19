@@ -82,6 +82,7 @@ function SignUp() {
         // ************************************************
         // 🔥 Send data to the backend
         setLoading(true);
+        console.log('Data : ' , formData);
         try {
             const response = await fetch(`${BASE_URL}/api/users/register/`, {
                 method: 'POST',
