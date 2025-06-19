@@ -27,7 +27,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 function SignUp() {
     const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
-    console.log(BASE_URL);
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
 
@@ -82,7 +81,6 @@ function SignUp() {
         // ************************************************
         // 🔥 Send data to the backend
         setLoading(true);
-        console.log('Data : ' , formData);
         try {
             const response = await fetch(`${BASE_URL}/api/users/register/`, {
                 method: 'POST',
@@ -91,36 +89,91 @@ function SignUp() {
                 },
                 body: JSON.stringify(formData),
             });
-
-            const data = await response.json();
-            if (data.status === 'success') {
-                // 🔥 Set success message
-                // setSuccessMsg(data.message);
-                toast.success(data.message , 
-                    {
-                        position : "top-right",
-                        autoClose : 3000,
-                        theme : "colored"
-                    }
-                )
-                // 🔥 Clear form data
-                setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
-                // 🔥 Redirect to login page
-                navigate('/login');
-            } else {
-                // 🔥 Set error message
-                setErrorMsg(data.message);
+        
+            const data = await response.json(); // Read body
+        
+            if (!response.ok) {
+                // 🔥 Backend returned 4xx or 5xx error (like 400/500)
+                // Handle known errors from backend
+                const errorMessage =
+                    typeof data.message === 'string'
+                        ? data.message
+                        : Object.values(data.message).flat().join(' ') || "Registration failed.";
+                
+                setErrorMsg(errorMessage);
+                toast.error(errorMessage, {
+                    position: "top-right",
+                    autoClose: 3000,
+                    theme: "colored",
+                });
+                return;
             }
+        
+            // ✅ Successful response
+            toast.success(data.message, {
+                position: "top-right",
+                autoClose: 3000,
+                theme: "colored",
+            });
+        
+            setFormData({
+                first_name: '',
+                last_name: '',
+                email: '',
+                password: '',
+                confirm_password: ''
+            });
+        
+            navigate('/login');
+        
         } catch (error) {
-            // 🔥 Handle any errors that occur during the fetch
-            // console.error("Error during signup:", error);
+            // 🔥 Catch network/server-side issues
             setErrorMsg("An error occurred while signing up. Please try again later.");
             setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
         } finally {
-            // 🔥 Set loading state to false
             setLoading(false);
         }
-        // Set loading state to true while processing
+        
+
+        // try {
+        //     const response = await fetch(`${BASE_URL}/api/users/register/`, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(formData),
+        //     });
+
+        //     const data = await response.json();
+        //     console.log(data);
+        //     if (data.status === 'success') {
+        //         // 🔥 Set success message
+        //         // setSuccessMsg(data.message);
+        //         toast.success(data.message , 
+        //             {
+        //                 position : "top-right",
+        //                 autoClose : 3000,
+        //                 theme : "colored"
+        //             }
+        //         )
+        //         // 🔥 Clear form data
+        //         setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
+        //         // 🔥 Redirect to login page
+        //         navigate('/login');
+        //     } else {
+        //         // 🔥 Set error message
+        //         setErrorMsg(data.message);
+        //     }
+        // } catch (error) {
+        //     // 🔥 Handle any errors that occur during the fetch
+        //     // console.error("Error during signup:", error);
+        //     setErrorMsg("An error occurred while signing up. Please try again later.");
+        //     setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
+        // } finally {
+        //     // 🔥 Set loading state to false
+        //     setLoading(false);
+        // }
+        // // Set loading state to true while processing
     };
 
 

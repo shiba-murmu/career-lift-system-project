@@ -9,7 +9,7 @@ from .serializers import RegisterSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import MyTokenObtainPairSerializer
 from rest_framework.permissions import IsAuthenticated
-
+from rest_framework import serializers
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def profile_view(request):
@@ -33,18 +33,40 @@ def profile_view(request):
 #         return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
     
 
-logger = logging.getLogger(__name__)
-
 @api_view(['POST'])
 def register(request):
+    serializer = RegisterSerializer(data=request.data)
+
     try:
-        serializer = RegisterSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response({
+            "status": "success",
+            "message": "Account created successfully!"
+        }, status=status.HTTP_201_CREATED)
+
+    except serializers.ValidationError as e:
+        # Get the nested error messages and format them
+        error_dict = e.detail
+        error_messages = []
+
+        for field, messages in error_dict.items():
+            if isinstance(messages, list):
+                error_messages.extend(messages)
+            else:
+                error_messages.append(str(messages))
+
+        return Response({
+            "status": "error",
+            "message": " ".join(error_messages)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
     except Exception as e:
-        logger.error(f"Registration Error: {str(e)}")
-        return Response({"status": "error", "message": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response({
+            "status": "error",
+            "message": "Something went wrong. Please try again."
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(['POST'])
 # def register(request):

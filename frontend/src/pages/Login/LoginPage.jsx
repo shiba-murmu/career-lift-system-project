@@ -66,7 +66,6 @@ function LoginPage() {
 
             const data = await response.json();
             // loading(false);
-            console.log('Data : ', data);
             if (response.ok) {
                 setSpinnerLoading(true);
                 // store jwt tokem in localstorage
