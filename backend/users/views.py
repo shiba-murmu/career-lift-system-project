@@ -1,4 +1,5 @@
 # users/views.py
+import logging
 
 from rest_framework.decorators import api_view , permission_classes
 from rest_framework.response import Response
@@ -24,14 +25,26 @@ def profile_view(request):
 # from .serializers import RegisterSerializer
 # from django.contrib.auth.models import User
 
-@api_view(['POST'])
-def register(request):
-    serializer = RegisterSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save()
-        return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
+# @api_view(['POST'])
+# def register(request):
+#     serializer = RegisterSerializer(data=request.data)
+#     if serializer.is_valid(raise_exception=True):
+#         serializer.save()
+#         return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
     
 
+logger = logging.getLogger(__name__)
+
+@api_view(['POST'])
+def register(request):
+    try:
+        serializer = RegisterSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
+    except Exception as e:
+        logger.error(f"Registration Error: {str(e)}")
+        return Response({"status": "error", "message": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(['POST'])
 # def register(request):
