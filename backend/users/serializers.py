@@ -57,6 +57,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 # from django.contrib.auth.hashers import make_password
 
 class RegisterSerializer(serializers.ModelSerializer):
+    print("RegisterSerializer" , serializers.ModelSerializer)
     confirm_password = serializers.CharField(write_only=True)
 
     class Meta:
