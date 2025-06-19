@@ -112,7 +112,14 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top-left corner
   }, [pathname]); // Trigger effect when pathname changes
-
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
   return null;
 }
 
