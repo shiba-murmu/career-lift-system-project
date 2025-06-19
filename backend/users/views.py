@@ -18,18 +18,33 @@ def profile_view(request):
         "email" : user.email,
     })
     
+# from rest_framework.decorators import api_view
+# from rest_framework.response import Response
+# from rest_framework import status
+# from .serializers import RegisterSerializer
+# from django.contrib.auth.models import User
+
 @api_view(['POST'])
 def register(request):
     serializer = RegisterSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        # If the serializer is valid, it will raise an exception if not
-        email = serializer.validated_data.get('email')
-        if User.objects.filter(email=email).exists():
-            return Response({"status": "error", "message": "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
-    if serializer.is_valid():
         serializer.save()
         return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
-    return Response({"status": "error", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+    
+
+
+# @api_view(['POST'])
+# def register(request):
+#     serializer = RegisterSerializer(data=request.data)
+#     if serializer.is_valid(raise_exception=True):
+#         # If the serializer is valid, it will raise an exception if not
+#         email = serializer.validated_data.get('email')
+#         if User.objects.filter(email=email).exists():
+#             return Response({"status": "error", "message": "Email already exists"}, status=status.HTTP_400_BAD_REQUEST)
+#     if serializer.is_valid():
+#         serializer.save()
+#         return Response({"status": "success", "message": "Account created successfully!"}, status=status.HTTP_201_CREATED)
+#     return Response({"status": "error", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 # @api_view(['POST'])
 class MyTokenObtainPairView(TokenObtainPairView):
