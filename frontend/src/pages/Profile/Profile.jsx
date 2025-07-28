@@ -3,7 +3,12 @@ import "./profile.css"; // Your custom styles
 import IconButtonWithBadge from "../../components/UI/button/IconButtonWithBadge";
 import Logout from "../../components/Logout/Logout";
 import { isAuthenticated } from "../../components/Auth/isAuthenticate";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+// import { ProfilePictureUpload } from "../../components/profileUpload/ProfilePictureUpload";
+// import ProfilePictureUpload 
+// import Profile
+// import ProfilePictureUpload from "../../components/profileUpload";
+// import ProfilePictureUpload from "../../components/profileUpload/ProfilePictureUpload";
 
 function MoreContent() {
     return (
@@ -15,60 +20,16 @@ function MoreContent() {
 
 function Profile() {
     const isLoggedIn = isAuthenticated();
-    const [firstName , setFirstName] = React.useState('');
-    const [lastName , setLastName] = React.useState('');
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
-    const fetchUserProfile = async () => {
-        const token = localStorage.getItem('access');
-        if (!token) {
-            console.error("No access token found");
-            return;
-        }
+    const [firstName , setFirstName] = React.useState('Shiba');
+    const [lastName , setLastName] = React.useState('Murmu');
+   
 
-        try {
-            const response = await fetch(`${BASE_URL}/api/users/userdata/`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                toast.error(errorData.detail);
-                console.error("Error fetching user data:", errorData);
-                return;
-            }
-
-            const userData = await response.json();
-            setFirstName(userData.first_name);
-            setLastName(userData.last_name);
-            // You can now use this data in your component state
-            // setUser(userData); // if using useState
-        } catch (error) {
-            console.error("Network error:", error);
-        }
-    };
+       
+    
 
 
 
-    // Show toast only once after login
-    useEffect(() => {
-        const toastShown = localStorage.getItem("profile_toast_shown");
 
-        if (isLoggedIn && !toastShown) {
-            toast.success("Welcome to your profile!", {
-                position: "top-right",
-                autoClose: 3000,
-                theme: "colored",
-            });
-
-            localStorage.setItem("profile_toast_shown", "true");
-        }
-        fetchUserProfile();
-
-    }, [isLoggedIn]);
 
     return (
         <div className="min-h-screen w-full bg-[#e0e8ff] dark:bg-neutral-900">
@@ -117,6 +78,8 @@ function Profile() {
 
             {/* More Content Section */}
             <MoreContent />
+            {/* < ProfilePictureUpload /> */}
+            {/* < ProfilePictureUpload /> */}
         </div>
     );
 }
