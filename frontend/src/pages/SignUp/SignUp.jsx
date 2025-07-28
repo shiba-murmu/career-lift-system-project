@@ -81,58 +81,7 @@ function SignUp() {
         // ************************************************
         // 🔥 Send data to the backend
         setLoading(true);
-        try {
-            const response = await fetch(`${BASE_URL}/api/users/register/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
         
-            const data = await response.json(); // Read body
-        
-            if (!response.ok) {
-                // 🔥 Backend returned 4xx or 5xx error (like 400/500)
-                // Handle known errors from backend
-                const errorMessage =
-                    typeof data.message === 'string'
-                        ? data.message
-                        : Object.values(data.message).flat().join(' ') || "Registration failed.";
-                
-                setErrorMsg(errorMessage);
-                toast.error(errorMessage, {
-                    position: "top-right",
-                    autoClose: 3000,
-                    theme: "colored",
-                });
-                return;
-            }
-        
-            // ✅ Successful response
-            toast.success(data.message, {
-                position: "top-right",
-                autoClose: 3000,
-                theme: "colored",
-            });
-        
-            setFormData({
-                first_name: '',
-                last_name: '',
-                email: '',
-                password: '',
-                confirm_password: ''
-            });
-        
-            navigate('/login');
-        
-        } catch (error) {
-            // 🔥 Catch network/server-side issues
-            setErrorMsg("An error occurred while signing up. Please try again later.");
-            setFormData({ first_name: '', last_name: '', email: '', password: '', confirm_password: '' });
-        } finally {
-            setLoading(false);
-        }
         
 
         // try {
