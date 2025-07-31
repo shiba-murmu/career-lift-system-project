@@ -139,7 +139,17 @@ function App() {
             <Route path="/home" element={<Home />} /> {/* Home page route */}
             <Route path="/about" element={<About />} /> {/* About page route */}
             <Route path="/contact" element={<Contact />} /> {/* Contact page route */}
-            <Route path="/ai assistant" element={<ProtectedData> <Ai /> </ProtectedData>} /> {/* AI Assistant page route */}
+
+
+            {/* <Route path="/ai assistant" element={<ProtectedData> <Ai /> </ProtectedData>} /> AI Assistant page route */}
+            {/* 
+                Changed this code for some times
+                here, to change in the assistant ui.
+
+            */}
+
+            <Route path="/ai assistant" element={ <Ai />}></Route>
+
             <Route path="/skill test" element={<ProtectedData> <SkillTest /> </ProtectedData>} /> {/* Skill Test page route */}
             <Route path="/explore career" element={<ExploreCareer />} /> {/* Explore Career page route */}
             {/* Private routes */}
