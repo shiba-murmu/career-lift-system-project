@@ -11,8 +11,13 @@ import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 
 import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase";
+import { toast } from "react-toastify";
+
+
 function LoginPage() {
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // used to send api data
+
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     // State to manage password visibility
@@ -56,34 +61,21 @@ function LoginPage() {
         setLoading(true); // Set loading state to true
         // If validation passes, proceed with the API call
         try {
-            const response = await fetch(`${BASE_URL}/api/users/login/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            const data = await response.json();
-            // loading(false);
-            if (response.ok) {
-                setSpinnerLoading(true);
-                // store jwt tokem in localstorage
-                localStorage.setItem('access', data.access);
-                localStorage.setItem('refresh', data.refresh);
-                setFormData({ email: '', password: '' });
-                setSuccess('Login successfull');
-                navigate('/profile');
-            }
-            else {
-                setError(data.non_field_errors);
-                setLoading(false);
-                setFormData({ email: '', password: '' });
+            const userCredential = await signInWithEmailAndPassword(
+                auth,
+                formData.email,
+                formData.password,
+            )
+            const user = userCredential.user
+            if (user.emailVerified) {
+                toast.success('Login successfull !');
+                console.log("User : ", user)
+                // redirect to profile page or other page..
+            } else {
+                toast.warn('Please verify email before login.')
             }
         } catch (error) {
-            setError('An error occurred while logging in. Please try again.');
-            setFormData({ email: '', password: '' });
-            setLoading(false);
+            toast.error('Login failed.')
         }
     }
     return (
@@ -170,7 +162,7 @@ function LoginPage() {
                             color="primary"
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-full"
                         >
-                            {loading ? 'Logging in...' : 'Login'}
+                            {loading ? 'Signing In...' : 'Sign In'}
                         </Button>
                         <p className="text-center text-sm">
                             Don't have an account?{" "}

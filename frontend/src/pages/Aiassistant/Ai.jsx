@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import axios from "axios";
 const Ai = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
@@ -24,18 +24,43 @@ const Ai = () => {
                 messagesContainerRef.current.scrollHeight;
         }
     }, [messages]);
+    const callGeminiAPI = async (prompt) => {
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Assuming you're using Vite
 
-    const handleSend = () => {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+        const headers = {
+            "Content-Type": "application/json",
+        };
+
+        const data = {
+            contents: [
+                {
+                    parts: [{ text: prompt }]
+                }
+            ]
+        };
+
+        try {
+            const response = await axios.post(url, data, { headers });
+            const reply = response.data.candidates[0]?.content?.parts[0]?.text || "No response from AI.";
+            return reply;
+        } catch (error) {
+            console.error("Gemini API Error:", error.message);
+            return "Error calling Gemini API.";
+        }
+    };
+    const handleSend = async () => {
         if (input.trim()) {
-            setMessages([...messages, { text: input, sender: "user" }]);
+            const userMessage = { text: input, sender: "user" };
+            setMessages((prev) => [...prev, userMessage]);
             setInput("");
-            // Simulate AI response
-            setTimeout(() => {
-                setMessages((prev) => [
-                    ...prev,
-                    { text: "This is an AI response.", sender: "ai" },
-                ]);
-            }, 1000);
+
+            // Call Gemini API and get response
+            const aiReply = await callGeminiAPI(input);
+
+            const aiMessage = { text: aiReply, sender: "ai" };
+            setMessages((prev) => [...prev, aiMessage]);
         }
     };
 
@@ -64,8 +89,8 @@ const Ai = () => {
                             >
                                 <div
                                     className={`max-w-[75%] p-3 rounded-lg shadow-md text-sm ${message.sender === "user"
-                                            ? "bg-indigo-800 text-white dark:bg-neutral-700 "
-                                            : "bg-gray-200 dark:bg-neutral-700 dark:text-white text-black"
+                                        ? "bg-indigo-800 text-white dark:bg-neutral-700 "
+                                        : "bg-gray-200 dark:bg-neutral-700 dark:text-white text-black"
                                         }`}
                                 >
                                     {message.text}

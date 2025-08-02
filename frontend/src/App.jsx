@@ -170,7 +170,7 @@ function App() {
             <Route path="/jobdetails/:id/post/:postId" element={<JobSinglePage />} /> {/* Job single page route */}
             {/* Add more routes as needed */}
           </Routes>
-          <ToastContainer position="bottom-right" autoClose={3000} />
+          <ToastContainer position="top-right" autoClose={3000} />
         </Layout>
       </Router>
     </>
