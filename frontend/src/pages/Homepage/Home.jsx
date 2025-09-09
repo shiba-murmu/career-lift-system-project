@@ -19,7 +19,7 @@ function SectionTwo() {
     <>
       <BackgroundParticles />
       <div
-        className="bg-[#AAB8CB] dark:bg-neutral-800 h-64 md:min-h-[70vh] w-full flex justify-center flex-col items-center"
+        className="bg-[#e0e8ff] dark:bg-neutral-800 h-64 md:min-h-[70vh] w-full flex justify-center flex-col items-center"
         style={{ position: "relative", overflow: "hidden" }}
       >
         <div className="text-center  flex  flex-col justify-center items-center h-full ">
@@ -128,7 +128,7 @@ function SectionThree() {
             <TextShow>
               <img
                 src="./images/otherCareer.png"
-                className="rounded-[50%] relative z-50 editingImage md:h-80 w-70 md:h-96 md:w-96 object-cover"
+                className="rounded-[50%] relative z-50 editingImage  w-70 md:h-96 md:w-96 object-cover"
               />
             </TextShow>
           </div>
@@ -147,7 +147,7 @@ function SectionFour() {
 
   return (
     <>
-      <div className="relative h-64 md:min-h-[70vh] z-50 w-full grid place-items-center text-2xl  md:text-7xl  font-bold text-amber-400">
+      <div className="bg-[#e0e8ff] relative z-50 h-64 md:min-h-[70vh] w-full grid place-items-center text-2xl  md:text-7xl  font-bold text-amber-400">
         <TextShow>EXPLORE US</TextShow>
       </div>
     </>
