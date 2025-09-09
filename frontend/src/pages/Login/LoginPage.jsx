@@ -11,9 +11,7 @@ import PopupAlert from "../../components/Alerts/Popoup/PopupAlert";
 
 import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase";
-import { toast } from "react-toastify";
+
 
 
 function LoginPage() {
@@ -60,23 +58,7 @@ function LoginPage() {
         }
         setLoading(true); // Set loading state to true
         // If validation passes, proceed with the API call
-        try {
-            const userCredential = await signInWithEmailAndPassword(
-                auth,
-                formData.email,
-                formData.password,
-            )
-            const user = userCredential.user
-            if (user.emailVerified) {
-                toast.success('Login successfull !');
-                console.log("User : ", user)
-                // redirect to profile page or other page..
-            } else {
-                toast.warn('Please verify email before login.')
-            }
-        } catch (error) {
-            toast.error('Login failed.')
-        }
+       // login credentials
     }
     return (
         <>

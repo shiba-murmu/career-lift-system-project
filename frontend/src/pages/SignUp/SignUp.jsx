@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import './signup.css';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
-import { auth } from "../../../firebase";
+
+
 /**
  * Spinner component for loading state
  */
@@ -84,20 +84,7 @@ function SignUp() {
         // 🔥 Send data to the backend
         setLoading(true);
 
-        try {
-            const userCredential = await createUserWithEmailAndPassword(
-                auth,
-                formData.email,
-                formData.password);
-            if (userCredential && userCredential.user) {
-                toast.success('Account created successfully !')
-                toast.success('Now you can login to your account !')
-                navigate('/login')
-            }
-        } catch (error) {
-            toast.error(error.message)
-            console.error("Error during sign-up:", error.message);
-        }
+        
     };
     return (
         <>
